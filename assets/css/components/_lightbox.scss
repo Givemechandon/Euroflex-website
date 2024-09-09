@@ -1,0 +1,110 @@
+.ecn-lightbox {
+  &--wrapper {
+    position: fixed;
+    z-index: 9999999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      margin-left: -0.05em;
+      vertical-align: middle;
+    }
+
+  
+
+  }
+
+  &--content {
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    /* -webkit-transform: translate3d(0,0,0); */
+    /* transform: translate3d(0,0,0); */
+    color: #2b2e38;
+    max-width: 400px;
+    margin: 0 auto;
+    vertical-align: middle;
+    border-radius: 0;
+    border-radius: 4px;
+    
+
+    &--close {
+      display: block!important;
+      position: absolute;
+      background: $blue-theme-light-300;
+      padding: 11px;
+      border-radius: 0;
+      font-size: 0;
+      top: -15px;
+      right: -15px;
+      cursor: pointer;
+      outline: none;
+      border-radius: 100%;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        display: block;
+        background: use-svg(icon-close, $white) no-repeat center center;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &--body {
+      // background: $white;
+      background-color: $white;
+      border: 1px solid $gray-800;
+      padding: 25px 30px;
+      text-align: center;
+      border-radius: 10px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-sizing: border-box;
+      box-shadow: 0 0 10px 0 rgba($black, 0.08);
+
+      iframe{
+        width: 100%;
+
+        @media (max-width: 600px) {
+          height: 230px;
+        }
+      }
+    
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ecn-lightbox {
+    /* &--wrapper {
+    } */
+    &--content {
+      &--body {
+        padding: 40px 20px 30px 20px;
+      }
+      &--close{
+        top: -10px;
+        right: -10px;
+      }
+    }
+  }
+}

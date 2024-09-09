@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Institutional" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- Institucional title -->
+    <section class="institutional__title">
+      <div class="container">
+        <div class="institutional__title--wrapper">
+          <h2>Informações</h2>
+        </div>
+      </div>
+    </section>
+    <!-- END Institucional title -->
+    <!-- Institucional menu info -->
+    <section class="institutional__menu">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="/institucional/nossas-lojas"> Nossas Lojas</a>
+          </li>
+          <li>
+            <a href="/institucional/politica-de-privacidade"> Política de Privacidade</a>
+          </li>
+          <li>
+            <a href="/institucional/seja-um-franqueado"> Seja um Franqueado</a>
+          </li>
+          <li>
+            <a href="/institucional/termos-e-condicoes"> Termos e Condições</a>
+          </li>
+          <li>
+            <a href="/institucional/descarte-colchao"> Como Descartar seu Colchão?</a>
+          </li>
+          <li>
+            <a href="/institucional/trocas-e-devolucoes"> Trocas e Devoluções</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="institutional__menu-mobile">
+      <div class="container">
+        <vtex:contentPlaceHolder id="menu-mobile" />
+      </div>
+    </section>
+    <!-- Institucional content -->
+    <section class="institutional__content container">
+        <vtex:contentPlaceHolder id="Conteúdo" />
+    </section>
+    <!-- END Institucional content -->
+
+
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Popup -->
+  <div class="ecn-lightbox">
+    <div class="ecn-lightbox--wrapper ecn-lightbox--wrapper--institutional">
+      <div class="ecn-lightbox--content">
+        <div class="ecn-lightbox--content--wrapper">
+          
+          <div class="ecn-lightbox--content--wrapper">
+            <a class="ecn-lightbox--content--close" aria-label="Fechar" href="javascript:void(0)">x</a>
+            <div class="ecn-lightbox--content--body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Popup -->
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+  <vtex:template id="EURO-scripts" />
+  
+  <script type="text/javascript">
+        var prevArrow = '<div class="slick-prev"> </div>'
+        var nextArrow = '<div class="slick-next"> </div>'
+        $('.franqueado__banner').slick({
+            infinite: true,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 1000,
+            arrows: false
+        });
+
+        $('.comments__body').slick({
+            infinite: false,
+            dots: false,
+            speed: 1000,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            prevArrow: prevArrow,
+            nextArrow: nextArrow,
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        })
+
+        $('.franqueado__lojas').slick({
+            infinite: false,
+            speed: 1000,
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: prevArrow,
+                        nextArrow: nextArrow,
+                    }
+                },
+                {
+                    breakpoint: 1190,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        prevArrow: prevArrow,
+                        nextArrow: nextArrow,
+                    }
+                }
+                ]
+
+        })
+    </script>
+  
+  
+  <!-- Footer -->
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Projeto do hotsite Kingsdown -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:metaTags />
+    <meta name="controller" content="Home" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <vtex:template id="EURO-styles" />
+    <link rel="stylesheet" href="/arquivos/stylesHotsite.css"/>
+    
+</head>
+
+<body>
+    <!-- START - Subtemplate Header -->
+    <vtex:template id="EURO-header" />
+    <!-- END - Subtemplate Header -->
+    
+    <!-- START - Miolo da página -->
+    <main class="main" id="main">
+        <!-- Start - First Banner -->
+        <section class="hotsite_intro">
+            <article class="hotsite_intro--banner">
+                <div class="first_intro_banner desktop">
+                    <div class="slides">
+                        <vtex:contentPlaceHolder id="FirstBanner-Desktop" />
+                    </div>
+                </div>
+                <div class="area_arrows_intro">
+                    <span class="arrow-left-first-slide arrow"><img src="/arquivos/leftArrowB.png" alt="Arrow Icon"/></span>
+                    <span class="arrow-right-first-slide arrow"><img src="/arquivos/rightArrowB.png" alt="Arrow Icon"/></span>
+                </div>
+            </article>
+            <article class="hotsite_intro--banner-mobile">
+                <div class="first_intro_banner">
+                    <div class="slidesM">
+                        <vtex:contentPlaceHolder id="FirstBanner-Mobile" />
+                    </div>
+                </div>
+                <div class="area_arrows_intro-M">
+                    <span class="arrow-left-first-slide-M arrow"><img src="/arquivos/leftArrowB.png" alt="Arrow Icon"/></span>
+                    <span class="arrow-right-first-slide-M arrow"><img src="/arquivos/rightArrowB.png" alt="Arrow Icon"/></span>
+                </div>
+            </article>
+        </section>
+        <!-- End - First Banner -->
+        <!-- Start - Tail Banner -->
+        <section class="hotsite_tail--kings">
+            <article class="area_tail">
+                <vtex:contentPlaceHolder id="areaDescriptionImage" />
+                <vtex:contentPlaceHolder id="areaDescription" />
+            </article>
+        </section>
+        <!-- End - Tail Banner -->
+        <!-- Start - Kings and Euro -->
+        <section class="hotsite_kings_and_euro">
+            <vtex:contentPlaceHolder id="Container-Banners" />
+            <article class="area-moved">
+                <vtex:contentPlaceHolder id="slickAreaTitle" />
+                <div class="container_cards">
+                    <vtex:contentPlaceHolder id="slickAreaCards" />
+                    <div class="container_arrows_buttons">
+                        <div class="area_arrows area_arrows-KE">
+                            <span class="arrow-left-KE arrow"><img src="/arquivos/leftArrowW.png" alt="Arrow Icon"/></span>
+                            <span class="arrow-right-KE arrow"><img src="/arquivos/rightArrowW.png" alt="Arrow Icon"/></span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- End - Kings and Euro -->
+        <!-- Start - Description Line Kingsdown -->
+        <section class="hotsite_description--area">
+            <article class="area_description">
+                <div class="title_area">
+                    <h1 class="title">CONHEÇA A LINHA KINGSDOWN</h1>
+                    <span>Veja os diferencias dos colchões Euro Kingsdown.</span>
+                </div>
+                <vtex:contentPlaceHolder id="ContentAreaInfo" />
+            </article>
+        </section>
+        <!-- End - Description Line Kingsdown -->
+        <!-- Start - Ideal Comfort -->
+        <section  class="hotsite_ideal-comfort">
+            <article class="content_area">
+                <vtex:contentPlaceHolder id="IdealComfortAreaTitle" />
+                <div class="image_area">
+                    <img src="/arquivos/imageComfort.png" alt="Image Ideal Comfort"/>
+                </div>
+            </article>
+        </section>
+        <!-- End - Ideal Comfort -->
+        <!-- Start - Outher Plus -->
+        <section class="hotsite_outher-plus">
+            <article class="content_outher">
+                <fieldset class="element_product">
+                    <div class="info_element">
+                        <vtex:contentPlaceHolder id="Container-Title-1" />
+                        <vtex:contentPlaceHolder id="Container-Icons-1" />
+                        <a href="https://www.eurocolchoes.com/colchao-diamond-casal/p" target="_blank" class="buy_button">
+                            QUERO ESSE
+                        </a>
+                    </div>
+                    <div class="image_slider">
+                        <vtex:contentPlaceHolder id="Container-Images-1" />
+                        <div class="area_arrows-dia area_arrows">
+                            <span class="arrow-left-dia arrow"><img src="/arquivos/leftArrowW.png" alt="Arrow Icon"/></span>
+                            <span class="arrow-right-dia arrow"><img src="/arquivos/rightArrowW.png" alt="Arrow Icon"/></span>
+                        </div>
+                    </div>
+                    <a href="https://www.eurocolchoes.com/colchao-diamond-casal/p" target="_blank" class="buy_button mobile">
+                        QUERO ESSE
+                    </a>
+                </fieldset>
+                <fieldset class="element_product">
+                    <div class="info_element">
+                        <vtex:contentPlaceHolder id="Container-Title-2" />
+                        <vtex:contentPlaceHolder id="Container-Icons-2" />
+                        <a href="https://www.eurocolchoes.com/colchao-platinum-casal/p" target="_blank" class="buy_button">
+                            QUERO ESSE
+                        </a>
+                    </div>
+                    <div class="image_slider">
+                        <vtex:contentPlaceHolder id="Container-Images-2" />
+                        <div class="area_arrows-pla area_arrows">
+                            <span class="arrow-left-pla arrow"><img src="/arquivos/leftArrowW.png" alt="Arrow Icon"/></span>
+                            <span class="arrow-right-pla arrow"><img src="/arquivos/rightArrowW.png" alt="Arrow Icon"/></span>
+                        </div>
+                    </div>
+                    <a href="https://www.eurocolchoes.com/colchao-platinum-casal/p" target="_blank" class="buy_button mobile">
+                        QUERO ESSE
+                    </a>
+                </fieldset>
+                <fieldset class="element_product">
+                    <div class="info_element">
+                        <vtex:contentPlaceHolder id="Container-Title-3" />
+                        <vtex:contentPlaceHolder id="Container-Icons-3" />
+                        <a href="https://www.eurocolchoes.com/colchao-majestic-casal/p" target="_blank" class="buy_button">
+                            QUERO ESSE
+                        </a>
+                    </div>
+                    <div class="image_slider">
+                        <vtex:contentPlaceHolder id="Container-Images-3" />
+                        <div class="area_arrows-mas area_arrows">
+                            <span class="arrow-left-mas arrow"><img src="/arquivos/leftArrowW.png" alt="Arrow Icon"/></span>
+                            <span class="arrow-right-mas arrow"><img src="/arquivos/rightArrowW.png" alt="Arrow Icon"/></span>
+                        </div>
+                    </div>
+                    <a href="https://www.eurocolchoes.com/colchao-majestic-casal/p" target="_blank" class="buy_button mobile">
+                        QUERO ESSE
+                    </a>
+                </fieldset>
+                <fieldset class="element_product">
+                    <div class="info_element">
+                        <vtex:contentPlaceHolder id="Container-Title-4" />
+                        <vtex:contentPlaceHolder id="Container-Icons-4" />
+                        <a href="https://www.eurocolchoes.com/colchao-windsor-casal/p" target="_blank" class="buy_button">
+                            QUERO ESSE
+                        </a>
+                    </div>
+                    <div class="image_slider">
+                        <vtex:contentPlaceHolder id="Container-Images-4" />
+                        <div class="area_arrows-wi area_arrows">
+                            <span class="arrow-left-wi arrow"><img src="/arquivos/leftArrowW.png" alt="Arrow Icon"/></span>
+                            <span class="arrow-right-wi arrow"><img src="/arquivos/rightArrowW.png" alt="Arrow Icon"/></span>
+                        </div>
+                    </div>
+                    <a href="https://www.eurocolchoes.com/colchao-windsor-casal/p" target="_blank" class="buy_button mobile">
+                        QUERO ESSE
+                    </a>
+                </fieldset>
+            </article>
+        </section>
+        <!-- End - Outher Plus -->
+    </main>
+    <!-- END - Miolo da página -->
+    
+    <!-- Footer -->
+    <vtex:template id="EURO-footer" />
+    <vtex:template id="EURO-scripts" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="/arquivos/scriptHotsite.js"></script>
+
+    <!-- Footer -->
+    
+</body>
+</html>

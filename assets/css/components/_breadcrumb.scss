@@ -1,0 +1,117 @@
+.bread-crumb {
+  ul {
+    li {
+      display: inline-block;
+
+      &.last{
+        a{
+          color: $blue-theme;
+          font-weight: bold;
+        }
+      }
+
+      &:before{
+        content: '\25BA';
+        margin: 10px;
+        color: $gray-800;
+        font-size: 7px;
+        font-weight: bold;
+        vertical-align: middle;
+      }
+
+      strong{
+        display: inline-block;
+      }
+
+      &:first-of-type {
+        &:before{
+          display: none;
+        }
+        a {
+          color: $gray-800;
+          font-size: 0;
+
+          &:before{
+            content: '';
+            
+            margin-right: 10px;
+            vertical-align: bottom;
+          }
+
+          &:after {
+            content: 'Home';
+            @include rem('font-size', 14px);
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        @include rem('font-size', 14px);
+        font-family: $font_family;
+        font-weight: 300;
+        color: $blue-theme;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bread-crumb {
+    ul {
+      text-align: center;
+      li {
+        display: inline-block;
+  
+        &:before{
+          content: '|';
+          margin: 10px;
+          color: $gray-800;
+          font-size: 10px;
+          vertical-align: middle;
+        }
+  
+     
+  
+        &:first-of-type {
+          &:before{
+            display: none;
+          }
+          a {
+            color: $gray-800;
+            font-size: 0;
+  
+            &:before{
+             display: none;
+            }
+  
+            &:after {
+              content: 'Home';
+              font-size: 10px;
+            }
+          }
+        }
+  
+        a {
+          display: inline-block;
+          text-decoration: none;
+          font-size: 10px;
+          font-family: $font_family;
+          font-weight: 300;
+          color: $gray-800;
+          text-transform: uppercase;
+        }
+
+        strong{
+          display: inline-block;
+          a{
+            font-weight: bold;
+          }
+          
+        }
+      }
+    }
+  }  
+}

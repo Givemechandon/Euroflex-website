@@ -1,0 +1,120 @@
+body.loja-virtual{
+    main {
+        padding-top: 135px;
+
+        section  .loja__virtual__banner .box-banner a img {
+            height: 670px;
+            object-fit: cover;
+            width: 100%;
+            @media screen and (min-width: 1150px) {
+                height: 870px;
+            }
+            
+        }
+
+        .loja__virtual__content{
+            width: 290px;
+            height: 410px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            background: rgba(52, 77, 102, 0.8);
+            backdrop-filter: blur(2px);
+            position: absolute;
+            justify-content: center;
+            left: calc(50% - 290px/2);
+            top: 190px;
+            border-radius: 20px;
+            @media screen and (min-width: 1150px) {
+                width: 1200px;
+                height: 383px;
+                left: calc(50% - 1200px/2);
+                top: 350px;
+                border-radius: 40px;
+                backdrop-filter: blur(5px);
+                padding: 60px;
+            }
+
+            .banner__Title{
+                font-family: 'Segoe UI', 'Cantarell';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 110%;
+                letter-spacing: -0.02em;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #FFFFFF;
+                width: 240px;
+                @media screen and (min-width: 1150px) {
+                    font-size: 60px;
+                    width: 100%;
+                }
+            }
+
+            .banner__text{
+                font-family: 'Segoe UI', 'Cantarell';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 110%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.01em;
+                color: #FFFFFF;
+                width: 250px;
+                margin: 20px 0 30px;
+
+                @media screen and (min-width: 1150px) {
+                    font-size: 28px;
+                    width: 75%;
+                }
+            }
+
+            .banner__buttons{
+                width: 55%;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                align-items: center;
+
+                @media screen and (min-width: 1150px) {
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                }
+
+                .banner__button{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 12px 35px;
+                    width: 260px;
+                    height: 50px;
+                    background: #C82127;
+                    border-radius: 100px;
+                    text-decoration: none;
+                    font-family: 'Segoe UI', 'Cantarell';
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26px;
+                    align-items: center;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    margin-bottom: 15px;
+                    font-size: 16px;
+
+
+                    @media screen and (min-width: 1150px) {
+                        margin-bottom: 0;
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+}

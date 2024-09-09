@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Institutional" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- Institucional title -->
+    <section class="institutional__title">
+      <div class="container">
+        <div class="institutional__title--wrapper">
+          <vtex:contentPlaceHolder id="Título" />
+        </div>
+      </div>
+    </section>
+    <!-- END Institucional title -->
+    <section class="institutional__menu">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="/institucional/quem-somos"> Quem Somos</a>
+          </li>
+          <li>
+            <a href="/institucional/assistencia-tecnica"> Assistência Técnica</a>
+          </li>
+          <li>
+            <a href="/institucional/diferenciais"> Diferenciais</a>
+          </li>
+          <li>
+            <a href="/institucional/atendimento-hoteis"> Hotéis</a>
+          </li>
+          <li>
+            <a href="/institucional/pesquisa-de-satisfacao"> Pesquisa de Satisfação</a>
+          </li>
+          <li>
+            <a href="/institucional/contato">Contato</a>
+          </li>
+          <li>
+            <a href="https://eurocolchoes.gupy.io/"> Trabalhe Conosco</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="institutional__menu-mobile">
+      <div class="container">
+        <vtex:contentPlaceHolder id="menu-mobile" />
+      </div>
+    </section>
+    <!-- Institucional content -->
+    <section class="institutional__content">
+      <div class="container">
+
+        <div class="institutional__content--wrapper">
+
+          <!-- Menu lateral -->
+
+          <div class="institutional__cms">
+            <!-- Tipbar -->
+            <vtex:contentPlaceHolder id="Conteúdo" />
+            <!-- END Tipbar -->
+          </div>
+
+          <!-- END Menu lateral -->
+        </div>
+      </div>
+
+    </section>
+    <!-- END Institucional content -->
+
+
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Popup -->
+  <div class="ecn-lightbox">
+    <div class="ecn-lightbox--wrapper ecn-lightbox--wrapper--institutional">
+      <div class="ecn-lightbox--content">
+        <div class="ecn-lightbox--content--wrapper">
+          
+          <div class="ecn-lightbox--content--wrapper">
+            <a class="ecn-lightbox--content--close" aria-label="Fechar" href="javascript:void(0)">x</a>
+            <div class="ecn-lightbox--content--body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Popup -->
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+  <vtex:template id="EURO-scripts" />
+  <!-- Footer -->
+</body>
+
+</html>

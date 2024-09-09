@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Home" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- Full banner -->
+    <section class="home__webdoor">
+      <div class="home__webdoor--slider">
+        <vtex:contentPlaceHolder id="Webdoor" />
+      </div>
+    </section>
+    <!-- End Full banner -->
+
+    <!-- benefitsBar -->
+    <div class="home__benefits-bar">
+      <div class="container">
+        <div class="home__benefits-bar--wrapper">
+          <vtex.cmc:benefitsBar />
+        </div>
+      </div>
+    </div>
+    <!-- END benefitsBar -->
+
+
+    <!-- Mais Colchões -->
+    <section class="home__shelfs">
+      <div class="container">
+        <div class="home__shelfs--wrapper">
+          <div class="home__shelfs--nav">
+            <vtex:contentPlaceHolder id="[ Título ] Prateleiras Colchões" />
+            <vtex:contentPlaceHolder id="[ Navegação ] Prateleiras Colchões" />
+          </div>
+          <div class="home__shelfs--container">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Mais Colchões -->
+
+
+    <!-- Institucional -->
+    <section class="home__institutional">
+      <div class="container">
+        <div class="home__institutional--wrapper">
+          <div class="home__institutional--call-to-action ecn-parallax" data-velocity=".05">
+            <vtex:contentPlaceHolder id="[ Institucional ] Call to action video" />
+          </div>
+          <div class="home__institutional--slider ecn-parallax" data-velocity="-.05">
+            <div class="home__institutional--slider--wrapper">
+              <vtex:contentPlaceHolder id="[ Institucional ] Textos institucionais" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Institucional  -->
+
+
+    <!-- Mais Categorias -->
+    <section class="home__shelfs">
+      <div class="container">
+        <div class="home__shelfs--wrapper">
+          <div class="home__shelfs--nav">
+            <vtex:contentPlaceHolder id="[ Título ] Prateleiras Categorias" />
+            <vtex:contentPlaceHolder id="[ Navegação ] Prateleiras Categorias" />
+          </div>
+          <div class="home__shelfs--container">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Mais Categorias -->
+
+
+
+    <!-- About -->
+    <section class="home__about">
+      <div class="container">
+        <div class="home__about--wrapper">
+          <div class="home__about--text ecn-parallax" data-velocity=".05">
+            <div class="home__about--text--wrapper">
+              <vtex:contentPlaceHolder id="[ Sobre nós ] Texto institucional" />
+            </div>
+          </div>
+          <div class="home__about--images">
+            <div class="home__about--images--frame ecn-parallax" data-velocity="-.04">
+              <!-- <vtex:contentPlaceHolder id="[ Sobre nós ] Moldura" /> -->
+            </div>
+            <div class="home__about--images--figure ecn-parallax" data-velocity=".03">
+              <vtex:contentPlaceHolder id="[ Sobre nós ] Imagem Ilustrativa" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: About  -->
+
+    <!-- About -->
+    <section class="home__blog">
+      <div class="container">
+        <div class="home__blog--wrapper">
+          <vtex:contentPlaceHolder id="Título Blog" />
+          <ul class="js-home-blog">
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- END: About  -->
+
+    <!-- Countdown-->
+    <vtex.cmc:euroofertaexpirarelogio />
+    <!-- Countdown-->
+
+    <!-- Carroussel de Selos -->
+
+    <div class="seals-info-container" style="display:none;">
+      <div class="info-container">
+
+        <div class="icon-info">
+          <img src="/arquivos/img/icon-info.png" />
+        </div>
+
+        <div class="complete-info">
+
+          <div class="title-info">
+            <span>
+              <vtex:contentPlaceHolder id="Titulo do Carrossel" />
+              O MELHOR COLCHÃO DO BRASIL
+            </span>
+          </div>
+
+          <div class="content-info">
+            <span>
+              <vtex:contentPlaceHolder id="Texto do Carrossel" />
+              Selo de Excelência em Franchising pelo segundo ano consecutivo, a honraria
+              é considerada o principal reconhecimento do mercado de franquia nacional.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="seals-container">
+
+          <ul class="carrosel-seals">
+
+            <vtex:contentPlaceHolder id="Selos do Carrossel" />
+            <li class="seal">
+              <span class="change-text" style="display:none;">
+                Selo de Excelência em Franchising pelo segundo ano consecutivo, a honraria é considerada o principal
+                reconhecimento do mercado de franquias nacional.
+              </span>
+              <img src="/arquivos/img/Selo_ABF_Excelencia2022_PANTONE-ai.png" />
+            </li>
+
+            <li class="seal">
+              <span class="change-text" style="display:none;">
+                Nós somos a única empresa brasileira no ramo de colchões associada à maior recicladora do mundo, a
+                UNIFI.
+              </span>
+              <img src="/arquivos/img/selo_repreve.png" />
+            </li>
+
+            <li class="seal">
+              <span class="change-text" style="display:none;">
+                Utilizamos madeira de reflorestamento certificada pela Rainforest Alliance de Nova Iorque, contribuindo
+                para um mundo melhor hoje e para as próximas gerações.
+              </span>
+              <img src="/arquivos/img/selo_reflorestamento.png" />
+            </li>
+
+            <li class="seals">
+              <span class="change-text" style="display:none;">
+                Possuímos o selo RA1000 de Excelência de atendimento por 12 meses seguidos.
+              </span>
+              <img src="/arquivos/img/selo_reclame_aqui.png" />
+            </li>
+
+            <li class="seals">
+              <span class="change-text" style="display:none;">
+                A Euro Colchões possui a exclusividade da produção dos colchões de luxo Kingsdown no Brasil, sendo a
+                única empresa certificada pelo instituto Sleep to Live.
+              </span>
+              <img src="/arquivos/img/selo_kingsdown_(1).png" />
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+
+  <vtex:template id="EURO-scripts" />
+  <script src="/arquivos/Euro-2021-enhancedCounter.js"></script>
+
+
+  <!-- Footer -->
+</body>
+
+</html>

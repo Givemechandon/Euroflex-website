@@ -1,0 +1,114 @@
+.account{
+    font-family: $font_family;
+    .t-heading-1, .t-heading-2{
+        font-family: $font_family;
+    }
+    .b--action-primary{
+        border-color: $blue-theme-light-300;
+        background-color: $black;
+        color: $white;
+        &.vtex-account_menu-link{
+            background-color: transparent;
+            color: $blue-theme;
+        }
+    }
+    .c-action-primary{
+        color: $black;
+    }
+    .c-link{
+        color: $black;
+        svg{
+            fill: $black !important;
+        }
+    }
+    .bw1{
+        border-width: 1px;
+    }
+    .vtex-account__user-info{
+        display: flex;
+        align-items: center;
+        .vtex-account__user-image{
+            svg{
+                path[fill="#979797"]{
+                    fill: $blue-theme-light-300 !important;
+                }
+                path[fill="#D8D8D8"]{
+                    fill: #F3F3F3 !important;
+                }
+            }
+        }
+        .vtex-account__user-greeting{
+            font-weight: bold;
+            color: $blue-theme;
+        }
+    }
+   
+
+    .vtex-account__page{
+    
+        header{
+            padding: .75rem;
+            .vtex-pageHeader__container{
+                background-color:transparent;
+                border-radius: 4px;
+                padding: 0;
+
+                .vtex-pageHeader__title{
+                    color: $blue-theme-light-300;
+                }
+                .b--action-primary{
+                    color: $white;
+                    background-color: $blue-theme;
+                    border-radius: 30px;
+                }
+                .c-action-primary{
+                    color: $blue-theme;
+                }
+            }
+        }
+
+       
+        .vtex-account__page-body{
+            .w-40-ns.w-100-s{
+                .pb5.pr5-ns.flex-auto {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .myo-order-card{
+            .fl.w-100.w-70-ns {
+                .dib.w-80.pl3.c-on-base.f6.fw4.lh-copy {
+                    .db.mt1.f6 {
+                        display: none!important;
+                    }
+                }
+            }
+
+            .c-on-action-secondary{
+                color: $white;
+                background-color: $black;
+                border-color: $black;
+            }
+        }
+    }
+
+    .vtex-modal__confirmation{
+        .bg-action-primary{
+            color: $white !important;
+            background-color: $blue-theme !important;
+            border-radius: 30px;
+        }
+    }
+
+    .vtex-modal__overlay{
+        z-index: 9999999999;
+    }
+
+    //Task-6526 ocultando data estimada de entrega da transportadora para os usuários.
+    main.vtex-account__order-details .center .w-100.pv7.fl {
+        .flex.flex-column {
+            display: none;
+        }
+    }
+}

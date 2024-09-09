@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Product" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- Top content -->
+    <section class="product__breadcrumb">
+      <div class="container">
+        <div class="product__breadcrumb--wrapper">
+          <!-- Conteúdo abaixo do Breadcrumb -->
+          <vtex.cmc:breadCrumb />
+          <!-- Conteúdo abaixo do Breadcrumb -->
+        </div>
+      </div>
+    </section>
+    <!-- END  Top content -->
+
+    <!-- Product top -->
+    <section class="product__top">
+      <div class="container">
+        <!-- Featured image -->
+        <div class="product__image">
+          <div class="product__stamps">
+            <vtex.cmc:hightLight />
+            <vtex.cmc:discountHightLight />
+          </div>
+
+          <vtex.cmc:ProductImage />
+        </div>
+        <!-- END Featured image -->
+
+        <!-- Product Info -->
+        <div class="product__info">
+          <div class="product__info--buy">
+            <!-- Product Name -->
+            <div class="product__name">
+              <h1 class="product__name--wrapper">
+                <vtex.cmc:productName />
+              </h1>
+            </div>
+            <!-- END Product Name -->
+
+            <!-- Product price -->
+            <div class="product__price">
+              <div class="product__price--wrapper">
+                <vtex.cmc:skuPrice />
+              </div>
+            </div>
+            <!-- End Product price -->
+
+            <div class="product__shortDescription" style="display: none;">
+              <div class="product__shortDescription--wrapper">
+                <vtex.cmc:productDescriptionShort />
+              </div>
+            </div>
+
+            <!-- Product SKU selection -->
+            <div class="product__similar">
+              <div class="product__similar--wrapper">
+                <vtex:contentPlaceHolder id="Produtos Similares" />
+              </div>
+            </div>
+            <!-- Product SKU selection -->
+
+            <!-- Product SKU selection -->
+            <div class="product__sku-selection" style="display: none;">
+              <div class="product__sku-selection--wrapper">
+                <vtex.cmc:skuSelection />
+              </div>
+            </div>
+            <!-- Product SKU selection -->
+
+            <div class="product__info--qty" style="display: none;">
+              <div class="product__info--qty--wrapper">
+                <span>Quantidade</span>
+                <div class="pdp-qty">
+                  <button class="pdp-qty--counter-minus" tabindex="0">-</button>
+                  <input type="text" value="1" tabindex="1" disabled="disabled" />
+                  <button class="pdp-qty--counter-plus" tabindex="2">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Buy -->
+            <div class="product__info--buy-cta" style="display: none;">
+              <div class="product__info--buy-cta--wrapper">
+                <vtex.cmc:BuyButton />
+                <a href="/" class="pdp-back-to-home" title="Escolher mais produtos">Escolher mais produtos</a>
+              </div>
+            </div>
+            <!-- END Product Buy -->
+            <!-- Shipping control-->
+            <div class="product__shipping-selection" style="display: none;">
+              <div class="product__shipping-selection--wrapper">
+                <vtex.cmc:shippingValue />
+              </div>
+            </div>
+            <!-- END Product shipping control -->
+
+          </div>
+        </div>
+        <!-- END Product Info -->
+      </div>
+    </section>
+    <!-- END Product top -->
+
+
+    <section class="product__details">
+      <!-- Descrição -->
+      <div class="container descricao">
+        <h2 class="descricao__title">Descrição</h2>
+        <div class="descricao__content">
+          <vtex.cmc:ProductDescription />
+        </div>
+      </div>
+      <!-- END Descrição -->
+
+      <!-- Garantia -->
+      <div class="container garantia">
+        <div class="garantia__box">
+          <i class="garantia__icon"></i>
+          <vtex:contentPlaceHolder id="Garantia" />
+        </div>
+      </div>
+      <!-- END Garantia -->
+
+      <!-- Colchão Simulado -->
+      <div class="container colchao-simulado">
+        <div class="colchao-simulado__img">
+          <vtex:contentPlaceHolder id="Colchão Simulado Imagem" />
+        </div>
+        <div class="colchao-simulado__nav"></div>
+        <div class="colchao-simulado__info">
+          <div class="colchao-simulado__title">
+            <i class="colchao-simulado__title--icon"></i>
+            <vtex:contentPlaceHolder id="Colchão Simulado Títulos" />
+          </div>
+          <div class="colchao-simulado__description">
+            <vtex:contentPlaceHolder id="Colchão Simulado Descrições" />
+          </div>
+        </div>
+      </div>
+      <!-- END Colchão Simulado -->
+    </section>
+
+
+    <!-- Shelfs -->
+    <section class="product__shelf">
+      <div class="container">
+        <div class="product__shelf--wrapper">
+          <vtex:contentPlaceHolder id="Título prateleira" />
+          <vtex:contentPlaceHolder id="Prateleira" />
+        </div>
+      </div>
+    </section>
+    <!-- END Shelfs -->
+
+
+    <!-- Product Specification -->
+    <div id="productSpecificationContainer" style="display: none;">
+      <vtex.cmc:productSpecification />
+    </div>
+    <!-- END Product Specification -->
+
+
+
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+  <vtex:template id="EURO-scripts" />
+  <!-- Footer -->
+  <script src="/arquivos/colchao-simulado.js"></script>
+</body>
+
+</html>

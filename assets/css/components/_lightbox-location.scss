@@ -1,0 +1,133 @@
+.ecn-lightbox {
+    &--wrapper {
+        &--locate-popup {
+            .ecn-lightbox--content {
+                max-width: 420px;
+
+                &--body {
+                    h3{
+                        @include rem('font-size', 20px);
+                        @include rem('line-height', 24px);
+                        color: $blue-theme;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    span{
+                        display: block;
+                        @include rem('font-size', 14px);
+                        @include rem('line-height', 22px);
+                        color: $gray-800;
+                    }
+                    form{
+                        display: block;
+                        margin: 30px 0 28px;
+                        select{
+                            display: block;
+                            margin: 0 auto 28px;
+                            @extend %select-common;
+                            max-width: 360px;
+                        }
+                        button[type="submit"]{
+                            @extend %primary-button-md;
+                            width: 245px;
+                            max-width: 100%;
+                        }
+                        .select2 {
+                            outline: none;
+                            margin-bottom: 40px;
+                            &-selection {
+                                display: block;
+                                margin: 0 auto;
+                                padding: 0;
+                                border: 1px solid $blue-theme;
+                                @extend %select-common;
+                                max-width: 360px;
+                                background-image: none;
+                                @include media-breakpoint-down(sm){
+                                    height: 50px;
+                                }
+                                &__arrow {  
+                                    width: 11px;
+                                    height: 6px;
+                                    right: 15px;
+                                    top: 20px;
+                                    transition: .3s;
+                                    b {
+                                        border-color: transparent;
+                                        border-style: none;
+                                        border-width: unset;
+                                        height: 0;
+                                        left: unset;
+                                        margin-left: -0;
+                                        margin-top: -0;
+                                        position: absolute;
+                                        top: unset;
+                                        width: 0;
+                                      display: block;
+                                      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.951' height='5.877' viewBox='0 0 9.951 5.877'%3E%3Cpath id='Seta_' data-name='Seta ' d='M9.792,101.189l-.326-.328a.546.546,0,0,0-.77,0l-3.718,3.718-3.722-3.722a.546.546,0,0,0-.77,0l-.326.326a.545.545,0,0,0,0,.77L4.591,106.4a.556.556,0,0,0,.386.175h0a.556.556,0,0,0,.385-.175l4.428-4.436a.55.55,0,0,0,.159-.389A.544.544,0,0,0,9.792,101.189Z' transform='translate(0 -100.698)' fill='%238f8f8f'/%3E%3C/svg%3E%0A");
+                                      background-repeat: no-repeat;
+                                      background-size: contain;
+                                      width: 11px;
+                                      height: 6px;
+                                    }
+                                }
+                                .select2-selection__rendered {
+                                    line-height: 47px;
+                                    color: $blue-theme;
+                                    font-weight: 600;
+                                    padding: 0 15px;
+                                }
+                            }
+                            &.select2-container--open {
+                                .select2-selection__arrow {
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+                .select2 {
+                    &-container {
+                        width: 100% !important;                        
+                    }
+                }    
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .ecn-lightbox {
+        &--wrapper {
+            &--locate-popup {
+                .ecn-lightbox--content {
+    
+                    &--body {
+                        h3{
+                            @include rem('font-size', 14px);
+                            @include rem('line-height', 16px);
+                        }
+                        > span{
+                            @include rem('font-size', 10px);
+                            @include rem('line-height', 14px);
+                            outline: none !important;
+                        }
+                        span{ outline: none !important;}
+                        form{
+                            display: block;
+                            margin: 21px 0;
+                            select{
+                                margin: 0 auto 21px;
+                            }
+                            button[type="submit"]{
+                                width: 240px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

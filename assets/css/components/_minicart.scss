@@ -1,0 +1,766 @@
+#minicartLateral {
+  .minicart {
+    z-index: 99999999999;
+    position: fixed;
+    right: 0;
+    &-info {
+      display: block;
+      position: fixed;
+      right: -388px;
+      top: 0;
+      z-index: 99999999999;
+      width: 388px;
+      height: 100%;
+      transition: all 0.6s ease-in-out;
+      background: $white;
+
+      .minicart-is-open & {
+        right: 0;
+      }
+    }
+    &-header {
+      position: relative;
+      padding: 17px 18px 19px;
+      background-color: $blue-theme-light-300;
+      margin-bottom: 30px;
+
+      &__btnClose {
+        position: absolute;
+        display: block;
+        background: transparent;
+        padding: 5px;
+        border-radius: 0;
+        font-size: 0;
+        top: 50%;
+        right: 18px;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        outline: none;
+        border-radius: 100%;
+        border: none;
+        appearance: none;
+
+        &:before {
+          content: "";
+          display: block;
+          background: use-svg(icon-close, $white) no-repeat center center;
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      &__titulo {
+        @include rem("font-size", 16px);
+        color: $white;
+        font-weight: 800;
+        text-align: left;
+        &:after {
+          content: "";
+          display: inline-block;
+          background: use-svg(icon-cart, $white) no-repeat center center;
+          width: 14.12px;
+          height: 11.88px;
+          margin-left: 7px;
+        }
+        & > span {
+          display: none !important;
+          position: relative;
+          display: inline-block;
+          float: right;
+          background: $blue-theme;
+          height: 20px;
+          width: 20px;
+          border-radius: 100%;
+          color: $white;
+          @include rem("font-size", 12px);
+          line-height: 20px;
+          text-align: center;
+          font-family: $font_family;
+          text-decoration: none;
+          font-weight: 700;
+        }
+      }
+
+      &__calculoFrete {
+        &-frase {
+          @include rem("font-size", 12px);
+          color: $gray-300;
+          margin-bottom: 10px;
+
+          span {
+            color: $gray-500;
+            font-weight: 600;
+          }
+        }
+
+        &-percent {
+          height: 3px;
+          width: 100%;
+          box-sizing: border-box;
+          background-color: rgba($gray-300, 0.25);
+          & > div {
+            display: block;
+            background-color: $gray-500;
+            height: 3px;
+          }
+        }
+      }
+    }
+
+    &-items {
+      padding: 0 20px;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      height: calc(100vh - 408px);
+      @include media-breakpoint-down(sm) {
+        height: auto;
+      }
+
+      &.vazio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 85px);
+
+        .minicart-items__vazio {
+          text-align: center;
+          @include rem("font-size", 14px);
+          @include rem("line-height", 22px);
+          color: $gray-800;
+          padding: 0 30px;
+          @include media-breakpoint-down(sm) {
+            @include rem("font-size", 11px);
+            @include rem("line-height", 18px);
+            padding: 0 15px;
+          }
+          &:before {
+            content: "";
+            display: block;
+            background: use-svg(icon-cart, $blue-theme-light-300) no-repeat center center;
+            width: 63.79px;
+            height: 53.65px;
+            margin: 0 auto 17px;
+            @include media-breakpoint-down(sm) {
+              width: 45.14px;
+              height: 37.96px;
+              margin: 0 auto 13px;
+            }
+          }
+        }
+      }
+      // height: 300px;
+      &__item {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e6e6e6;
+
+        &-bloco {
+          &__imgProduto {
+            display: inline-block;
+            width: 65px;
+            float: left;
+            img {
+              width: 100%;
+              height: auto;
+              vertical-align: top;
+            }
+          }
+
+          &__informacoesProduto {
+            display: inline-block;
+            width: calc(100% - 65px);
+            float: right;
+            box-sizing: border-box;
+            padding: 0 15px;
+
+            a {
+              text-decoration: none;
+            }
+
+            &-btnRemove {
+              position: absolute;
+              right: 0;
+              border: none;
+              background: transparent;
+              padding: 0;
+              appearance: none;
+              outline: none;
+              top: calc(50% - 15px);
+              transform: translate(0, -50%);
+
+              background: #e6e6e6;
+              width: 18px;
+              height: 18px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 0;
+              cursor: pointer;
+              border-radius: 100%;
+
+              &:before {
+                content: "";
+                display: block;
+                background: use-svg(icon-close, $gray-500) no-repeat center center;
+                width: 6px;
+                height: 6px;
+              }
+            }
+            &-nomeProduto {
+              display: block;
+              margin-bottom: 10px;
+              @include rem("font-size", 12px);
+              color: $blue-theme;
+              text-decoration: none;
+              line-height: 16px;
+              max-width: 90%;
+              font-weight: 600;
+            }
+
+            &-price {
+              @include rem("font-size", 11px);
+              color: $blue-theme;
+
+              .unavailable {
+                color: $red-theme;
+              }
+
+              p {
+                display: inline-block;
+                color: $blue-theme;
+                font-weight: 600;
+                &.de {
+                  margin-right: 10px;
+                  color: $gray-500;
+                  text-decoration: line-through;
+                  font-weight: 500;
+                }
+              }
+            }
+
+            &-blocoQtdPreco {
+              &__qtd {
+                .actions {
+                  position: relative;
+                  margin-top: 6px;
+                  display: inline-block;
+                  padding: 10px;
+                  width: 49px;
+                  button {
+                    position: absolute;
+                    border: none;
+                    background: transparent;
+                    padding: 0;
+                    appearance: none;
+                    font-size: 0;
+                    width: 11px;
+                    height: 11px;
+                    vertical-align: middle;
+                    outline: none;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $blue-theme-light-300;
+                    border-radius: 100%;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    &[data-action="del"] {
+                      left: 0;
+                      &:before {
+                        content: "";
+                        display: block;
+                        background: use-svg(icon-minus, $white) no-repeat center center;
+                        width: 4.35px;
+                        height: 4.35px;
+                      }
+                    }
+                    &[data-action="add"] {
+                      right: 0;
+                      &:before {
+                        content: "";
+                        display: block;
+                        background: use-svg(icon-more, $white) no-repeat center center;
+                        width: 4.35px;
+                        height: 4.35px;
+                      }
+                    }
+                  }
+
+                  input {
+                    width: 25px;
+                    height: 30px;
+                    vertical-align: middle;
+                    border: none;
+                    pointer-events: none;
+                    @include rem("font-size", 13px);
+                    color: $gray-500;
+                    text-align: center;
+                    border-radius: 0;
+                    appearance: none;
+                    box-shadow: none;
+                    &.qty {
+                      color: $blue-theme;
+                      font-weight: 600;
+                      position: relative;
+                      bottom: 2px;
+                      width: 10px;
+                      margin: 0 9px;
+                    }
+                  }
+                }
+              }
+              &__total {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .minicart-footer {
+    // display: none;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background: $white;
+
+    .empty-cart & {
+      display: none;
+    }
+
+    &__subtotal {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      &-frase {
+        display: inline-block;
+        float: left;
+        @include rem("font-size", 14px);
+        color: $gray-800;
+      }
+      &-valor {
+        display: inline-block;
+        float: right;
+        @include rem("font-size", 14px);
+        color: $blue-theme;
+        font-weight: 600;
+      }
+    }
+    &__total {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      &-frase {
+        display: inline-block;
+        float: left;
+        @include rem("font-size", 14px);
+        color: $gray-800;
+        font-weight: 400;
+      }
+      &-valor {
+        display: inline-block;
+        float: right;
+        @include rem("font-size", 14px);
+        color: $red-theme;
+        font-weight: 600;
+      }
+    }
+
+    &__botaoFinalizarPedido {
+      display: inline-block;
+      width: 100%;
+      margin-top: 10px;
+
+      .place-order {
+        @extend %primary-button-md;
+        width: 100%;
+        box-sizing: border-box;
+        float: right;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+      .checkout {
+        @extend %primary-button-md-outline;
+        width: 100%;
+        box-sizing: border-box;
+        float: left;
+        font-weight: 600;
+      }
+    }
+
+    &__infoCheckout {
+      // display: none !important;
+      &-blocoCep {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+
+        &__frase {
+          display: inline-block;
+          width: 45%;
+          float: left;
+          @include rem('font-size', 14px);
+          line-height: 35px;
+          color: $gray-800;
+        }
+
+        &__formCep {
+          position: relative;
+          display: inline-block;
+          width: 55%;
+          float: right;
+          &-freteCalculado {
+            display: none;
+            font-size: 10px;
+          }
+
+          input {
+            width: 100%;
+            height: 35px;
+            border: 1px solid $blue-theme-light-300;
+            padding: 0 30px 0 5px;
+            box-sizing: border-box;
+            margin: 0;
+            font-size: 10px;
+            outline: none;
+            border-radius: 4px;
+            appearance: none;
+            box-shadow: none;
+            color: $gray-500;
+          }
+          button {
+            position: absolute;
+            background: $blue-theme;
+            width: 34px;
+            height: 27.32px;
+            border-radius: 0;
+            border: none;
+            right: 4px;
+            top: 4px;
+            color: $white;
+            font-size: 10px;
+            text-transform: uppercase;
+            outline: none;
+            font-size: 0;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:before{
+              content: "";
+              display: block;
+              width: 11.14px;
+              height: 9px;
+              background: use-svg(arrow-button-submit, $white) no-repeat center center;
+            }
+          }
+        }
+
+        #modal-frete {
+          display: none;
+        }
+
+        &__cepCalculado {
+          display: none;
+          font-size: 10px;
+          margin-bottom: 5px;
+
+          &-excluir {
+            position: absolute;
+            right: 0;
+            border: none;
+            background: transparent;
+            padding: 0;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 999;
+            &:before {
+              content: "Alterar CEP";
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &-blocoVendedor {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+        &__frase {
+          display: inline-block;
+          width: 45%;
+          float: left;
+          font-size: 12px;
+          line-height: 25px;
+          text-transform: uppercase;
+        }
+
+        &-formVendedor {
+          position: relative;
+          display: inline-block;
+          width: 55%;
+          float: right;
+
+          &__nomeVendedor {
+            font-size: 10px;
+            padding-right: 15px;
+          }
+
+          &__excluirVendedor {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            background: transparent;
+            padding: 0;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 999;
+            &:before {
+              content: "";
+            }
+          }
+
+          input {
+            width: 100%;
+            height: 25px;
+            border: 1px solid $gray-700;
+            padding: 0 30px 0 5px;
+            box-sizing: border-box;
+            margin: 0;
+            font-size: 10px;
+            outline: none;
+            border-radius: 4px;
+            appearance: none;
+            box-shadow: none;
+          }
+          button {
+            position: absolute;
+            background: $gray-900;
+            width: 70px;
+            height: 25px;
+            border-radius: 0;
+            border: none;
+            right: 0;
+            top: 0;
+            color: $white;
+            font-size: 10px;
+            text-transform: uppercase;
+            outline: none;
+          }
+        }
+      }
+      &-blocoCupom {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+        &__frase {
+          display: inline-block;
+          width: 45%;
+          float: left;
+          font-size: 12px;
+          line-height: 25px;
+          text-transform: uppercase;
+        }
+
+        &__valor {
+          display: none;
+          font-size: 10px;
+        }
+
+        &-formCupom {
+          position: relative;
+          display: inline-block;
+          width: 55%;
+          float: right;
+
+          input {
+            width: 100%;
+            height: 25px;
+            border: 1px solid $gray-700;
+            padding: 0 30px 0 5px;
+            box-sizing: border-box;
+            margin: 0;
+            font-size: 10px;
+            outline: none;
+            border-radius: 4px;
+            appearance: none;
+            box-shadow: none;
+          }
+          button {
+            position: absolute;
+            background: $gray-900;
+            width: 70px;
+            height: 25px;
+            border-radius: 0;
+            border: none;
+            right: 0;
+            top: 0;
+            color: $white;
+            font-size: 10px;
+            text-transform: uppercase;
+            outline: none;
+          }
+
+          &__preenchido {
+            &-txtCupom {
+              font-size: 10px;
+              text-align: right;
+            }
+            &-excluirCupom {
+              position: absolute;
+              top: 0;
+              right: 0;
+              border: none;
+              background: transparent;
+              padding: 0;
+              appearance: none;
+              outline: none;
+              cursor: pointer;
+              z-index: 999;
+              &:before {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#modal-frete {
+}
+
+@include media-breakpoint-down(sm) {
+  #minicartLateral {
+    position: fixed;
+    z-index: 9999999999;
+
+    &:after {
+      content: "";
+      position: fixed;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($black, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      z-index: 9;
+      .minicart-is-open & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .minicart {
+      &-info {
+        z-index: 999;
+        width: calc(100% - 40px);
+        overflow-y: auto;
+        right: -100vw;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 15px;
+      }
+      &-header {
+        position: sticky;
+        z-index: 99;
+        padding: 17px 18px 19px;
+        background-color: $blue-theme-light-300;
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin-bottom: 30px;
+
+        &__titulo {
+          margin-bottom: 0;
+        }
+      }
+      &-footer {
+        position: relative;
+        &__infoCheckout {
+          &-blocoCep {
+            &__frase {
+              padding-right: 15px;
+            }
+
+            &__formCep {
+              &-freteCalculado {
+                font-size: 9px;
+              }
+            }
+
+            #modal-frete {
+              display: none;
+            }
+
+            &__cepCalculado {
+              font-size: 9px;
+
+              &-excluir {
+              }
+            }
+          }
+
+          &-blocoVendedor {
+            &__frase {
+              font-size: 10px;
+              padding-right: 15px;
+              line-height: 12px;
+            }
+
+            &-formVendedor {
+              &__nomeVendedor {
+                font-size: 9px;
+                padding-right: 15px;
+              }
+
+              &__excluirVendedor {
+              }
+            }
+          }
+          &-blocoCupom {
+            &__frase {
+              font-size: 10px;
+              padding-right: 15px;
+              line-height: 12px;
+            }
+
+            &__valor {
+              display: none;
+              font-size: 9px;
+            }
+
+            &-formCupom {
+              &__preenchido {
+                &-txtCupom {
+                  font-size: 10px;
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

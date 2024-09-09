@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Landpage" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <vtex:template id="EURO-styles" />
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/arquivos/iconsmind.css" />
+  <link rel="stylesheet" href="/arquivos/euro-style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body id="container-geral">
+  <!-- Header -->
+  <vtex:template id="EURO-header" />
+
+  <main class="euro__landpage">
+
+    <!-- Banner principal -->
+    <section class="euro__container--fullbanner" id="landpage-topo">
+      <div class="euro__content--fullbanner">
+        <div class="swiper slide__principal">
+          <ul class="swiper-wrapper">
+            <vtex:contentPlaceHolder id="banner-principal" />
+          </ul>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados euro -->
+    <section class="euro__container--dados" id="dados">
+      <div class="euro__content--dados">
+        <vtex:contentPlaceHolder id="dados-euro" />
+      </div>
+    </section>
+
+    <!-- Primeiro passo euro -->
+    <section class="euro__container--primeiro-passo" id="primeiropasso">
+      <div class="euro__content--primeiro-passo container">
+        <vtex:contentPlaceHolder id="primeiro-passo-euro" />
+      </div>
+    </section>
+
+    <!-- Banner conheça a repreve -->
+    <section class="euro__container--conheca-repreve" id="repreve">
+      <div class="euro__content--conheca-repreve">
+        <vtex:contentPlaceHolder id="banner-conheca-repreve" />
+      </div>
+    </section>
+
+    <!-- Banner de doações INCA -->
+    <section class="euro__container__doacoes">
+      <div class="euro__content__doacoes">
+        <vtex:contentPlaceHolder id="banner-doacoes-inca" />
+      </div>
+    </section>
+
+    <!--Seção programa de certificação -->
+    <section class="euro__container--programa-certificacao">
+      <div class="euro__content--programa-certificacao container">
+        <vtex:contentPlaceHolder id="programa-certificacao" />
+      </div>
+    </section>
+
+    <!--Dados repreve -->
+    <section class="euro__container--dados-repreve">
+      <div class="euro__content--dados-repreve">
+        <vtex:contentPlaceHolder id="dados-repreve" />
+      </div>
+    </section>
+
+    <!--Conheça a linha ecomind -->
+    <section class="euro__container--linha-ecomind">
+      <div class="euro__content--linha-ecomind container">
+        <vtex:contentPlaceHolder id="linha-ecomind" />
+      </div>
+    </section>
+
+    <!--Produção ecomind -->
+    <section class="euro__container--producao-ecomind" id="ecomind">
+      <div class="euro__content--producao-ecomind container">
+        <vtex:contentPlaceHolder id="producao-ecomind" />
+      </div>
+    </section>
+
+    <!--Escolha ecomind -->
+    <section class="euro__container--escolha-ecomind">
+      <div class="swiper euro__content--escolha-ecomind">
+        <vtex:contentPlaceHolder id="escolha-ecomind" />
+      </div>
+    </section>
+
+    <!--Comprar meu colchão ecomind -->
+    <section class="euro__container--comprar-colchao">
+      <div class="euro__content--comprar-colchao container">
+        <vtex:contentPlaceHolder id="comprar-colchao" />
+      </div>
+    </section>
+
+    <!--Faça parte dessa história -->
+    <section class="euro__container--faca-parte">
+      <div class="euro__content--faca-parte container">
+        <vtex:contentPlaceHolder id="faca-parte" />
+      </div>
+    </section>
+
+    <!--Popup modal video -->
+    <section class="euro__container--modal-video">
+      <div class="euro__content--modal-video">
+        <vtex:contentPlaceHolder id="video-popup" />
+      </div>
+    </section>
+
+
+
+  </main>
+  <a href="#landpage-topo" class="back-to-top">
+    <i class="fa fa-angle-up top-icon"></i>
+    <i class="fa fa-angle-up"></i>
+  </a>
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+
+  <!-- Script -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!--<script src="/arquivos/euro-application-homolog-6972.js"></script>-->
+  <vtex:template id="EURO-scripts" />
+
+  <script>
+    document.querySelector('link[href*="euro-style.css"]').href = "/arquivos/euro-style-dev-8196.css"
+    document.querySelector('link[href*="euro-style.css"]')?.remove()
+  </script>
+</body>
+
+</html>

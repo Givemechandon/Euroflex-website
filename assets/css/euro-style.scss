@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import "tools/_font-rage.scss";
+@import "tools/_theme.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "tools/_mixins.scss";
+@import "tools/_svg-assets.scss";
+//@import "tools/_fontawesome.scss";
+// @import "tools/_sprites.scss";
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+@import "components/_typography.scss";
+@import "components/_form-elements.scss";
+@import "components/_buttons.scss";
+@import "components/_tipbar.scss";
+@import "components/_shelf-default.scss";
+@import "components/_backtotop.scss";
+@import "components/_minicart.scss";
+@import "components/_lightbox.scss";
+@import "components/_lightbox-newsletter.scss";
+@import "components/_lightbox-location.scss";
+@import "components/_lightbox-notify.scss";
+@import "components/_breadcrumb.scss";
+@import "components/_autocomplete.scss";
+@import "components/_login.scss";
+@import "components/_sidebar-institutional.scss";
+@import "components/_benefits-bar.scss";
+@import "components/_video-modal.scss";
+@import "components/_ecn-tabs.scss";
+@import "components/helpers";
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+
+@import "pages/_common.scss";
+@import "pages/_home.scss";
+@import "pages/_login.scss";
+@import "pages/_account.scss";
+@import "pages/_catalog.scss";
+@import "pages/_search.scss";
+@import "pages/_product.scss";
+@import "pages/_empty-search.scss";
+@import "pages/_not-found.scss";
+@import "pages/_institutional.scss";
+@import "pages/_support.scss";
+@import "pages/_empty-page.scss";
+@import "pages/_landpage.scss";
+@import "pages/_black-week.scss";
+@import "pages/LP-2022.scss";
+@import "pages/_29-feirao.scss";
+@import "pages/_loja-virtual.scss";
+
+/* ==========================================================================
+   Vendor
+   ========================================================================== */
+
+@import "vendor/_select2.scss";
+@import "vendor/_slick.scss";
+
+

@@ -1,0 +1,32 @@
+.body-checkout-confirmation {
+  #app-top {
+    margin-top: 60px;
+  }
+
+  #app-container {
+    margin-bottom: 60px;
+  }
+
+  .pa0.pv3.v-mid.dn.dtc-ns,
+  .pa0.w-20.pl1.pr1.pb2.dn.dtc-ns {
+    display: none;
+  }
+
+  .cf.br3.pa4.cconf-alert.bg-washed-green.ba.b--green.solid {
+    background: #f1f1f1;
+    border-color: #f2f2f2;
+    margin-top: 30px;
+
+    & * {
+      color: $black;
+    }
+
+    .bg-green {
+      background: $black;
+      border-radius: 4px;;
+      span {
+        color: $white;
+      }
+    }
+  }
+}

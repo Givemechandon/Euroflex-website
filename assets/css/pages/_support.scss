@@ -1,0 +1,284 @@
+.support {
+  
+  .footer{
+    margin-top: 90px;
+  }
+  &__title{
+    display: inline-block;
+    width: 100%;
+    background-color: $gray-100;
+    // background-image: url('/arquivos/banner-institucional.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 70px;
+    @include media-breakpoint-down(sm){
+      margin-bottom: 35px;
+    }
+    &--wrapper{
+      padding: 40px 0;
+      text-align: center;
+      @include media-breakpoint-down(sm){
+      }
+      h1{
+        color: $blue-theme;
+        @include rem('font-size', 38px);
+        font-weight: 300;
+        text-transform: uppercase;
+        @include media-breakpoint-down(sm){
+          @include rem('font-size', 16px);
+        }
+        span{
+          display: block;
+          @include rem('font-size', 45px);
+          font-weight: 600;
+          @include media-breakpoint-down(sm){
+            @include rem('font-size', 22px);
+          }
+        }
+      }
+    }
+  }
+
+  &__space{
+    display: block;
+    height: 70px;
+    @include media-breakpoint-down(sm){
+      height: 35px;
+    }
+  }
+
+  &__content{
+    display: inline-block;
+    width: 100%;
+
+    &--wrapper{
+      margin: 0 -15px;
+    }
+  }
+  &__menu{
+    display: inline-block;
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
+
+    ul{
+      list-style: none;
+      li{
+        width: 100%;
+        margin-bottom: 12px;
+        a{
+          @extend %primary-button-outline;
+          width: 100%;
+        }
+       
+      }
+      @include media-breakpoint-down(sm){
+        display: none;
+      }
+    }
+
+    select{
+      display: none;
+      @extend %select-common;
+      margin-bottom: 45px;
+
+      @include media-breakpoint-down(sm){
+        display: block;
+      }
+    }
+  }
+
+  /*
+  Institucional
+   */
+  &__cms {
+    display: inline-block;
+    width: 75%;
+    float: right;
+    padding: 0 15px;
+
+    @extend %long-text-md;
+
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
+
+    h3 {
+      @extend %title-md;
+      color: $black;
+    }
+
+    & > h4 {
+      @extend %title-sm;
+    }
+
+    & > h2 {
+      @extend %title-md;
+    }
+
+    ul, ol{
+      padding-left: 20px;
+      @extend %long-text-md;
+    }
+
+    hr{
+      border: none;
+      border-bottom: 1px solid $gray-100;
+      margin: 15px 0;
+      display: inline-block;
+      width: 100%;
+    }
+
+    p {
+      display: block;
+      margin-bottom: 20px;
+      @extend %long-text-md;
+      text-align: justify;
+
+      strong {
+        font-family: $font_family;
+      }
+    }
+
+    a{
+      color: $black;
+    }
+
+    .common-questions{
+      margin-bottom: 60px;
+      h2{
+        @extend %title-md;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $gray-200;
+      }
+      &__item{
+        & > h3{
+          @extend %subtitle-md;
+          padding: 20px 0;
+          margin: 0;
+          border-bottom: 1px solid $gray-200;
+          cursor: pointer;
+          text-transform: initial;
+          &:after{
+            content: '';
+            
+            float: right;
+          }
+          &.open{
+            &:after{
+              transform: rotate(-180deg);
+            }
+          }
+        }
+
+        h5{
+          @extend %subtitle-sm;
+        }
+      }
+
+      &__content{
+        display: none;
+        padding-top: 30px;
+        padding-bottom: 50px;
+      }
+      
+    }
+
+    .politica{
+      &__item{
+        &> h2{
+          @extend %title-md;
+          padding-bottom: 20px;
+          margin-bottom: 30px;
+          border-bottom: 1px solid $gray-200;
+        }
+        
+      }
+
+      &__list{
+        margin-bottom: 60px;
+        &--item{
+          & > strong{
+            display: block;
+            @extend %subtitle-md;
+            padding: 10px 0;
+            margin: 0;
+            cursor: pointer;
+            text-transform: initial;
+          }
+        }
+        
+      }
+    }
+    
+
+    form{
+      h3{
+        display: block;
+        margin-bottom: 30px;
+      }
+      .form-group{
+        margin-bottom: 20px;
+        @include media-breakpoint-down(sm){
+          margin-bottom: 15px;
+        }
+
+        
+
+        label.error{
+          display: none !important;
+        }
+        
+        label{
+          display: block;
+          @extend %long-text-sm;
+          margin-bottom: 10px;
+        }
+
+        
+
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="date"]{
+          @extend %input-common;
+        }
+        textarea{
+          @extend %input-common;
+          min-height: 300px;
+          padding: 20px;
+        }
+        select{
+          @extend %select-common;
+        }
+
+        &.has-error{
+          label{
+            color: $red;
+          }
+          input, select{
+            border-color: $red;
+          }
+        }
+
+       
+      }
+
+      button[type="submit"]{
+        @extend %primary-button;
+        display: block;
+        width: 240px;
+        max-width: 100%;
+        margin: 50px auto;
+        @include media-breakpoint-down(sm){
+          width: 100%;
+          margin: 30px auto;
+        }
+      }
+    }
+  }
+ 
+}

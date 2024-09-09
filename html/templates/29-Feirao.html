@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Home" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- Full banner -->
+    <section class="home__webdoor">
+      <div class="home__webdoor--slider">
+        <vtex:contentPlaceHolder id="Webdoor" />
+      </div>
+    </section>
+    <!-- End Full banner -->
+    <section class="banner">
+        <div class="banner-first-content">
+            <img class="banner__logo1" src="/arquivos/LOGO_FEIRAO_29_Feirao.png" alt="29 Feirao euro"/>
+            <img class="banner__logo2" src="/arquivos/PERSONAS2_29_Feirao.png" alt="29 Feirao euro"/>
+        </div>
+        <div class="banner-second-content">
+            <vtex:contentPlaceHolder id="BannerText" />
+        </div>
+    </section>
+    <section class="banner__desktop">
+        <vtex:contentPlaceHolder id="BannerDesktop" />
+    </section>
+
+    <!-- Mais Colchões -->
+    <section class="home__shelfs">
+      <div class="container">
+        <div class="home__shelfs--wrapper">
+          <div class="home__shelfs--category">
+            <vtex:contentPlaceHolder id="[ Título ] Prateleiras Colchões" />
+          </div>
+          <div class="home__shelfs--products">
+            <vtex:contentPlaceHolder id="Coleção" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Mais Colchões -->
+
+    <!-- Mais Categorias -->
+    <div class="banner1">
+        <vtex:contentPlaceHolder id="Categoria Banner1" />
+        <div class="banner1-box">
+            <div class="banner1--second--banner">
+                <vtex:contentPlaceHolder id="Categoria Banner2" />
+            </div>
+            <div class="banner1--third--banner">
+                <vtex:contentPlaceHolder id="Categoria Banner3" />
+            </div>
+        </div>
+    </div>
+    <section class="home__shelfs">
+      <div class="container">
+        <div class="home__shelfs--wrapper">
+          <div class="home__shelfs--category">
+            <vtex:contentPlaceHolder id="[ Título ] Prateleiras Categorias" />
+            <vtex:contentPlaceHolder id="[ Navegação ] Prateleiras Categorias" />
+          </div>
+          <vtex:contentPlaceHolder id="Título Ofertas" />
+          <div class="home__shelfs--products">
+            <vtex:contentPlaceHolder id="Ofertas" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="banner2"><vtex:contentPlaceHolder id="Categoria Banner4" /></div>
+    <section class="banner__desktop2">
+        <vtex:contentPlaceHolder id="Categoria Banner4 Desktop" />
+    </section>
+
+    <!-- END Mais Categorias -->
+
+  <!-- Carrossel de Selos -->
+  
+  <div class="seals-info-container" style="display:none;background-color: white;padding:50px 0;margin-bottom:0;">
+      <div class="info-container">
+       <div class="title-info-container">
+        <div class="icon-info">
+          <img src="/arquivos/icon-info.png" />
+        </div>
+
+        <div class="complete-info">
+
+          <div class="title-info">
+            <span>
+              <vtex:contentPlaceHolder id="Titulo do Carrossel" />
+              
+            </span>
+          </div>
+
+          <div class="content-info">
+            <span>
+              <vtex:contentPlaceHolder id="Texto do Carrossel" />
+              
+            </span>
+          </div>
+         </div>
+        </div>
+
+        <div class="seals-container">
+
+          <div class="carrosel-seals">
+
+            <vtex:contentPlaceHolder id="Selos do Carrossel" />
+          </div>
+        </div>
+    </div>
+  </div>
+  <vtex:contentPlaceHolder id="Feirao Modal" />
+    
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+  
+  <vtex:template id="EURO-scripts" />
+  <script src="/arquivos/Euro-2021-enhancedCounter.js"></script>
+  <script>
+      $( window ).on( "load", function() {
+        $(".shelf__default ul").slick({
+            infinite: false,
+            dots:true,
+            speed:300,
+            slidesToShow: 4,
+            slidesToScroll:4,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows:false
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite:true,
+                        dots:true
+                    }
+                }
+                
+            ]
+        })
+        $(".product-field ul").slick("unslick")
+      });
+      
+    $(".banner1--third--banner").on("click", function() {
+        $(".feirao-modal").addClass("active");
+    });
+    
+    $(".feirao-modal-content-btn, .feirao-modal").on("click", function() {
+        $(".feirao-modal").removeClass("active");
+    });
+  </script>
+  
+  <!-- Footer -->
+</body>
+
+</html>

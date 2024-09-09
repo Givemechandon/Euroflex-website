@@ -1,0 +1,12 @@
+<!-- Shelf ID: 	60c777d6-8110-4f64-a675-e11db97b4bdd  -->
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($evaluationRate = $product.EvaluationRate)
+<div class="shelf__similar--image" product-id="${id}">
+    <!-- product image-->
+    <!-- product image-->
+    <div class="product-image"><a title="$escapedName" href="$uri">$product.GetImageTag(50,50, "COR")</a></div>
+    <!-- div class="product-image"><a title="$escapedName" href="$uri">$product.GetImageTag(100,100)</a></div -->
+  
+</div>

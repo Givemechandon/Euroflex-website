@@ -1,0 +1,1140 @@
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+main.main {
+    padding-top: 140px;
+    margin: 0 auto;
+}
+main.main-content{
+    margin: 0 auto;
+    max-width: 1110px;
+}
+section{
+    display: block;
+    height: auto;   
+}
+a {
+    text-decoration: none;
+}
+
+.desktopBanner1{
+    background-image: url("/arquivos/FirstBannerDesktop-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 699px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.desktopBanner1 .description{
+    width: 374px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 215px;
+    margin-top: 180px;
+}
+.desktopBanner2 .description,
+.desktopBanner3 .description{
+    width: 564px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 215px;
+    margin-top: 180px;
+}
+.desktopBanner1 .firstName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #344D66;
+    margin-bottom: 10px;
+}
+.desktopBanner1 .descriptionName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 35px;
+    color: #344D66;
+    mix-blend-mode: normal;
+    margin-bottom: 20px;
+}
+.desktopBanner1 .buttonPlus{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 215px;
+    height: 55px;
+    background: #C82127;
+    border-radius: 100px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.desktopBanner2{
+    background-image: url("/arquivos/FirstBannerDesktop-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 699px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.desktopBanner2 .firstName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #344D66;
+    margin-bottom: 10px;
+}
+.desktopBanner2 .descriptionName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 35px;
+    color: #344D66;
+    mix-blend-mode: normal;
+    margin-bottom: 20px;
+}
+.desktopBanner2 .buttonPlus{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 215px;
+    height: 55px;
+    background: #C82127;
+    border-radius: 100px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.desktopBanner3{
+    background-image: url("/arquivos/FirstBannerDesktop-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 699px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.desktopBanner3 .firstName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.desktopBanner3 .descriptionName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 35px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    margin-bottom: 20px;
+}
+.desktopBanner3 .buttonPlus{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 215px;
+    height: 55px;
+    background: #C82127;
+    border-radius: 100px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.slides .slick-dots{
+    bottom: 50px !important;
+}
+.slides .slick-dots li button:before{
+    font-size: 14px;
+    color: transparent;
+    border: 2px solid #344D66;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    opacity: 1 !important;
+}
+.slides .slick-dots li.slick-active button:before {
+    opacity: 1 !important;  
+    color: transparent;
+    background-color: #344D66 !important;
+}
+.intro-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 70px;
+    margin-bottom: 60px;
+}
+.intro-icons .intro-icons-title{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #344D66;
+    mix-blend-mode: normal;
+    margin-bottom: 50px;
+}
+.intro-icons .intro-icons-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 90px;
+}
+.intro-icons .intro-icons-area .intro-icons-element{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 41px;
+    background: #8FA8C2;
+    border-radius: 20px;
+    flex: none;
+}
+.intro-icons .intro-icons-area .intro-icons-element img{
+    width: 55px;
+    height: 55px;
+    margin-right: 28px;
+}
+.intro-icons .intro-icons-area .intro-icons-element .icon-text{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+.intro-icons .line{
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid #EBEAED;
+}
+.know-area{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 75px; 
+    padding-top: 25px;
+}
+.know-area .area-description{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 470px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.know-area .area-description .know-title{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #344D66;
+    margin-top: 0px;
+}
+.know-area .area-description .know-description{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 32px;
+    color: #8FA8C2;
+    mix-blend-mode: normal;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 20px 0px;
+}
+.secondary-area{
+    background: #F8F8F8;
+    padding: 95px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.secondary-area .secondary-title{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #344D66;
+    mix-blend-mode: normal;
+    margin-bottom: 80px;
+}
+.secondary-area .secondary-area-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.secondary-area .secondary-area-elements .secondary-element{
+    display: flex;
+    flex-direction: row;
+    width: 920px;
+    height: 230px;
+    margin-bottom: 70px;
+}
+.secondary-area .secondary-area-elements .secondary-element img.icon-img{
+    width: 175px;
+    height: 170px;
+    margin-right: 50px;  
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .title-element{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: -0.4px;
+    color: #344D66;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .decription-element{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #8FA8C2;
+    margin-bottom: 20px;
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .warning{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    color: #8FA8C2;
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 110px;
+    margin-bottom: 20px;
+
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area.last{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    column-gap: 100px;
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area .check{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #344D66;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area .check img{
+    margin-right: 12px;
+}
+.superGuarantee{
+    background-image: url("/arquivos/BgImage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    padding: 56px 0px;
+}
+.superGuarantee .area-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.superGuarantee .area-text .text-start{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.superGuarantee .area-text .sub-description{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+}
+.mattresses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px 0px;
+    width: 100%;
+}
+.mattresses .mattresses-title{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #344D66;
+    mix-blend-mode: normal;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+.mattresses .mattresses-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.mattresses .mattresses-area .mattresses-element{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 70px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px 15px 40px;
+    width: 520px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 25px rgba(143, 168, 194, 0.2);
+    border-radius: 20px;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+    color: #344D66;
+    margin-bottom: 50px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button .mattresses-button-arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 59px;
+    height: 59px;
+    background: #344D66;
+    border-radius: 10px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons{
+    display: grid;
+    margin-bottom: 50px;
+    padding: 0px;
+    padding-left: 75px;
+    padding-right: 45px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.seven{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 110px;
+    row-gap: 20px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.one,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.three,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.six,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.eight,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.ten{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.two,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.four,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.five,
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.nine{
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 20px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons .mattresses-element-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons .mattresses-element-icon .mattresses-element-name{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #344D66;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer img.point{
+    margin: 0px 11px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .strongName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #344D66;
+    mix-blend-mode: normal;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .strongName img{
+    margin-right: 8px;
+}
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .sub-line{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .MiniName{
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #344D66;
+    mix-blend-mode: normal;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 1350px){
+    .mattresses-element img.mattresses-image-bg{
+        width: 600px;
+    }
+}
+@media(max-width: 1220px){
+    .desktopBanner1 .description,
+    .desktopBanner2 .description,
+    .desktopBanner3 .description {
+        margin-left: 145px;
+        margin-top: 155px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.two,
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.four,
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.five,
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.nine{
+        column-gap: 5px;
+    }
+    .mattresses-element img.mattresses-image-bg{
+        width: 530px;
+    }
+}
+@media(max-width: 1150px){
+    .know-area .area-description .know-description{
+        font-size: 17px;
+    }
+    .know-area .know-image-area img{
+        width: 500px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button {
+        width: 480px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.two,
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.four,
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.five,
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.nine{
+        column-gap: 0px;
+    }
+    .mattresses-element img.mattresses-image-bg{
+        width: 500px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons{
+        padding-left: 35px;
+        padding-right: 30px;
+    }
+}
+@media(max-width: 1110px){
+    main.main-content{
+        max-width: 1000px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons .mattresses-element-icon .mattresses-element-name{
+        font-size: 12px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons img{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media(max-width: 1065px){
+    .mattresses-element img.mattresses-image-bg {
+        width: 455px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button {
+        width: 460px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons {
+        padding-left: 20px;
+        padding-right: 25px;
+    }
+}
+@media(max-width: 1005px){
+    main.main-content{
+        max-width: 900px;
+    }
+    .intro-icons .intro-icons-title {
+        font-size: 26px;
+    }
+    .desktopBanner1 .description, 
+    .desktopBanner2 .description, 
+    .desktopBanner3 .description{
+        margin-left: 85px;
+    }
+    .know-area .area-description {
+        max-width: 435px;
+    }
+    .know-area .area-description .know-title {
+        font-size: 27px;
+    }
+    .know-area .area-description .know-description{
+        font-size: 16px;
+    }
+    .know-area .know-image-area img{
+        width: 430px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button{
+        width: 435px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element{
+        width: 850px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .strongName {
+        font-size: 10px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .MiniName {
+        font-size: 10px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.seven {
+        column-gap: 80px;
+    }
+}
+@media(max-width: 920px){
+    .intro-icons .intro-icons-area .intro-icons-element img{
+        width: 45px;
+        height: 45px;
+    }
+    .know-area{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .know-area .area-description .know-title{
+        font-size: 30px;
+    }
+    .know-area .area-description .know-description{
+        font-size: 19px;
+        margin-bottom: 50px;
+    }
+    .know-area .area-description{
+        max-width: 520px;
+    }
+    .know-area .know-image-area img{
+        width: 500px;
+    }
+    main.main-content{
+        max-width: 800px;
+    }
+    .intro-icons .intro-icons-area .intro-icons-element {
+        padding: 18px 18px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element{
+        width: 760px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area .check{
+        font-size: 12px;
+    }
+    .mattresses-element img.mattresses-image-bg{
+        width: 400px;
+    }
+    .desktopBanner1,
+    .desktopBanner2,
+    .desktopBanner3{
+        height: 480px;
+    }
+    .desktopBanner1 .description, .desktopBanner2 .description, .desktopBanner3 .description{
+        margin-top: 95px;
+        margin-left: 65px;
+        width: 460px;
+    }
+    .desktopBanner1 .firstName,
+    .desktopBanner2 .firstName,
+    .desktopBanner3 .firstName{
+        font-size: 40px;
+    }
+    .desktopBanner1 .descriptionName,
+    .desktopBanner2 .descriptionName,
+    .desktopBanner3 .descriptionName{
+        font-size: 23px;
+    }
+}
+@media(max-width: 846px){
+    main.main-content {
+        max-width: 700px;
+    }
+    .mattresses .mattresses-area .mattresses-element{
+        flex-direction: column;
+    }
+    .mattresses-element img.mattresses-image-bg{
+        width: 600px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button{
+        width: 565px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons img{
+        width: 120px;
+        height: 120px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons{
+        padding: 0px 50px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element img.icon-img{
+        margin-right: 35px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element {
+        width: 700px;
+    }
+}
+@media(max-width: 735px){
+    main.main-content{
+        max-width: 600px;
+    }
+    .desktopBanner1 .firstName, .desktopBanner2 .firstName, .desktopBanner3 .firstName{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    .desktopBanner1 .descriptionName, .desktopBanner2 .descriptionName, .desktopBanner3 .descriptionName{
+        font-size: 22px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    .desktopBanner1 .buttonPlus,
+    .desktopBanner2 .buttonPlus,
+    .desktopBanner3 .buttonPlus{
+        height: 60px;
+        width: 230px;
+    }
+    .desktopBanner1 .description {
+        width: 335px;
+        margin-top: 260px;
+    }
+    .desktopBanner2 .description {
+        width: 335px;
+        margin-top: 170px;
+    }
+    .desktopBanner3 .description {
+        margin-top: 150px;
+    }
+    .intro-icons .intro-icons-area img.plus{
+        margin: 15px 0px;
+    }
+    .intro-icons .intro-icons-area .intro-icons-element {
+        padding: 24px 40px;
+        width: 280px;
+    }
+    .intro-icons .intro-icons-area{
+        flex-direction: column;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area {
+        gap: 55px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area.last{
+        column-gap: 24px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element {
+        width: 650px;
+    }
+    .secondary-area{
+        padding: 50px 0px;
+    }
+    .superGuarantee{
+        padding: 56px 25px;
+    }
+    .superGuarantee .star-icon-area img{
+        width: 100%;
+    }
+    .secondary-area .secondary-area-elements .secondary-element img.icon-img{
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 500px;
+        margin-bottom: 50px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button {
+        width: 585px;
+    }
+    .desktopBanner1{
+        background-image: url("/arquivos/FirstBannerMobile1.png");
+        height: 850px;
+    }
+    .desktopBanner2{
+        background-image: url("/arquivos/FirstBannerMobile2.png");
+        height: 850px;
+    }
+    .desktopBanner3{
+        background-image: url("/arquivos/FirstBannerMobile3.png");
+        height: 850px;
+    }
+    .mattresses .mattresses-title {
+        font-size: 26px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons{
+        padding: 0px 85px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer{
+        flex-direction: column;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .strongName{
+        margin-bottom: 15px;
+        margin-right: 0px;
+    }
+    .know-area .area-description {
+        width: 500px;
+    }
+    .secondary-area .secondary-title {
+        font-size: 26px;
+    }
+}
+@media(max-width: 655px){
+    main.main-content{
+        max-width: 535px;
+    }
+    .desktopBanner1,
+    .desktopBanner2,
+    .desktopBanner3{
+        height: 770px;
+    }
+    .slides .slick-dots {
+        bottom: 60px !important;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons{
+        padding: 0px 35px;
+    }
+    .mattresses-element img.mattresses-image-bg{
+        width: 540px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button {
+        width: 515px;
+    }
+}
+@media(max-width: 555px){
+    .desktopBanner1, .desktopBanner2, .desktopBanner3{
+        height: 660px;
+    }
+    .desktopBanner1 .description {
+        margin-top: 190px;
+    }
+    .desktopBanner2 .description{
+        margin-top: 140px;
+    }
+    .desktopBanner3 .description{
+        margin-top: 130px;
+    }
+    .intro-icons {
+        padding-top: 45px;
+    }
+    .intro-icons .intro-icons-area .intro-icons-element {
+        padding: 28px 40px;
+        width: 300px;
+    }
+    .intro-icons .intro-icons-area img.plus{
+        margin: 20px 0px;
+    }
+    main.main-content {
+        max-width: 485px;
+    }
+    .know-area .area-description {
+        width: 445px;
+    }
+    .know-area .know-image-area img {
+        width: 445px;
+    }
+    .secondary-area .secondary-title {
+        font-size: 24px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element img.icon-img {
+        width: 160px;
+        height: 160px;
+    }
+    .secondary-area .secondary-title {
+        margin-bottom: 60px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .title-element {
+        font-size: 28px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .decription-element{
+        font-size: 16px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area .check{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area.last{
+        gap: 25px;
+    }
+    .superGuarantee .area-text .text-start {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .superGuarantee .area-text .sub-description {
+        font-size: 18px;
+    }
+    .mattresses-element img.mattresses-image-bg{
+        width: 470px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button{
+        width: 450px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons {
+        padding: 0px 5px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.one, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.three, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.six, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.eight, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.ten {
+        column-gap: 5px;    
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons .mattresses-element-icon .mattresses-element-name {
+        font-size: 10px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .MiniName{
+        width: 70px;
+        font-size: 11px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer img.point{
+        margin: 0px 15px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-footer .strongName{
+        font-size: 12px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element {
+        width: 445px;
+    }
+}
+@media(max-width: 490px){
+    .desktopBanner1, .desktopBanner2, .desktopBanner3{
+        height: 580px;
+    }
+    .slides .slick-dots {
+        bottom: 40px !important;
+    }
+    .desktopBanner1 .description {
+        margin-top: 175px;
+    }
+    .desktopBanner2 .description {
+        margin-top: 90px;
+        margin-left: 40px;
+    }
+    main.main-content{
+        max-width: 400px;
+    }
+    .intro-icons .intro-icons-title{
+        font-size: 22px;
+    }
+    .know-area .area-description{
+        width: 400px;
+    }
+    .know-area .know-image-area img{
+        width: 400px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element {
+        width: 400px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element .secondary-element-description .check-area.last{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+    .mattresses-element img.mattresses-image-bg {
+        width: 400px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button {
+        width: 410px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons {
+        padding: 0px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.two, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.four, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.five, .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-area-icons.nine{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 420px){
+    .desktopBanner1, .desktopBanner2, .desktopBanner3{
+        height: 520px;
+    }
+    .desktopBanner1 .description {
+        margin-top: 135px;
+        margin-left: 40px;
+    }
+    .desktopBanner2 .description {
+        margin-top: 65px;
+    }
+    .desktopBanner3 .description {
+        margin-top: 100px;
+        margin-left: 20px;
+        width: 345px;
+    }
+    main.main-content {
+        width: 335px;
+    }
+    .know-area .area-description{
+        width: 335px;
+    }
+    .know-area .know-image-area img{
+        width: 335px;
+    }
+    .secondary-area .secondary-area-elements .secondary-element {
+        width: 335px;
+    }
+    .mattresses-element img.mattresses-image-bg {
+        width: 345px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button .mattresses-button-arrow{
+        width: 40px;
+        height: 40px;
+    }
+    .mattresses .mattresses-area .mattresses-element .area-all-icons .mattresses-button {
+        width: 330px;
+        font-size: 20px;
+        padding: 15px 10px 15px 20px;
+    }
+}

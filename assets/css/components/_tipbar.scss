@@ -1,0 +1,73 @@
+.tipbar {
+  position: relative;
+  z-index: 9999999999;
+  background: $blue-theme;
+  padding: 10px 0;
+  color: $white;
+  overflow: hidden;
+
+  @media(max-width: 996px){
+    padding: 5px 0;
+  }
+
+  &__wrapper{
+    position: relative;
+    overflow: hidden;
+
+    @media(max-width:1399px) {
+      padding-right: 11rem;
+    }
+
+    @media(max-width:1199px) {
+      padding-right: 16rem;
+    }
+
+    @media(max-width:1024px) {
+      padding-right: 0rem;
+    }
+  }
+  ul{
+    list-style: none;
+    li{
+      display: inline-block;
+      @include rem('font-size', 12px);
+      text-transform: uppercase;
+      @media(max-width: 996px){
+        @include rem('font-size', 10px);
+      }
+      a{
+        color: $white;
+        @include rem('font-size', 12px);
+        text-decoration: none;
+      }
+    }
+  }
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-slide{
+    display: inline-block;
+    text-align: center;
+  }
+  &__slider{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__nav{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 250px;
+    background: $blue-theme;
+    ul{
+      display: flex;
+      justify-content: space-around;
+    }
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

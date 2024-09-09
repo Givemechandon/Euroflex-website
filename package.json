@@ -1,0 +1,69 @@
+{
+  "name": "vtex-speed-gulp",
+  "author": "E-Can <dev@agenciaecan.com.br>",
+  "store": "tezm99",
+  "acronym": "ctb",
+  "environment": "vtexcommercestable",
+  "license": "ISC",
+  "version": "0.1.0",
+  "description": "VTEX Store development tools - reverse proxy, compilation, minification, optimization and more!",
+  "scripts": {
+    "watch": "gulp watch",
+    "bower": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vtex",
+    "speed",
+    "vtex",
+    "speed",
+    "gulp",
+    "sass",
+    "compass"
+  ],
+  "vtex": {
+    "store": "tezm99",
+    "acronym": "ctb",
+    "environment": "vtexcommercestable",
+    "device": "web",
+    "protocol": "https"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-async-to-generator": "^7.12.1",
+    "@babel/preset-env": "^7.11.5",
+    "bootstrap": "^4.6.2",
+    "bower": "^1.8.14",
+    "connect-http-please": "^0.3.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-load-plugins": "^2.0.4",
+    "gulp-open": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "isarray": "^2.0.5",
+    "proxy-middleware": "^0.15.0",
+    "run-sequence": "^2.2.1",
+    "serve-static": "^1.14.1",
+    "url": "^0.11.0"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.13.4",
+    "compass": "^0.1.1",
+    "glob-watcher": "^5.0.5",
+    "gulp-sass": "^4.1.0",
+    "ruby": "^ 0.6.1",
+    "sass": "^1.26.10",
+    "yarn": "^1.22.10"
+  }
+}

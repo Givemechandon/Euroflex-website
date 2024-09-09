@@ -1,0 +1,90 @@
+<!-- Shelf ID: 13083d89-42c1-4d88-b364-f63143073387 -->
+#set($id = $product.Id)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+#set($evaluationRate = $product.EvaluationRate)
+
+<input type="hidden" value="$product.BestPrice" class="productPrice" />
+<input type="hidden" value="$product.ListPrice" class="productOldPrice" />
+<input type="hidden" value="$product.NumbersOfInstallment" class="sp_installments" />
+<span class="idProd" data-id="$id"></span>
+<div class="onlineSale" style="display: none;">
+$product.ProductField(437)
+</div>
+
+
+<div class="shelf__default--wrapper" data-id="$id">
+	
+		<div class="shelf__default--image">
+			<a href="$uri" alt="$product.Name">
+				<figure>
+					$product.GetImageTag(500, 500)
+				</figure>
+
+				<div class="shelf__default--highlight">
+					<span class="shelf__default--highlight-discount" title="$escapedName">$product.DiscountHightLight</span>
+					<span class="shelf__default--highlight-discount-percentage qdAuto$product.ListPriceMinusBestPriceInPercent" title="$escapedName">$product.ListPriceMinusBestPriceInPercent</span>
+					<span class="shelf__default--highlight-flags" title="$escapedName">$product.HightLight</span>
+				</div>
+			</a>
+			#if ($product.IsInStock)
+			<div class="shelf__default--buy">
+				$product.BottomBuy
+				<a href="javascript:void(0)" data-id="$id" class="buy-btn">Adicionar ao carrinho</a>
+				<a href="$uri" data-id="$id" class="view-btn">Consulte</a>
+			</div>
+			#end
+		</div>
+
+		<a href="$uri" alt="$product.Name">
+			<span class="shelf__default--product-name">
+				$product.Name
+			</span>
+			<span class="shelf__default--product-complement" style="display: none;">
+                $product.ProductField(438)
+                $product.ProductField(442)
+                $product.ProductField(453)
+                $product.ProductField(454)
+                $product.ProductField(467)
+                $product.ProductField(469)
+                $product.ProductField(472)
+                $product.ProductField(473)
+                $product.ProductField(476)
+								$product.ProductField(466)
+								$product.ProductField(471)
+								$product.ProductField(477)
+			</span>
+
+
+			#if ($product.IsInStock)
+			<div class="shelf__default--price">
+				#if ($product.HasBestPrice)
+				<div class="shelf__default---old-price">
+					<span class="old-price">$product.ListPrice</span>
+				</div>
+				#end
+				<div class="shelf__default---best-price">
+					<span class="best-price">
+						<strong>$product.BestPrice</strong>
+					</span>
+				</div>
+				
+				<div class="shelf__default---installments">
+					#if ($product.NumbersOfInstallment > 1)
+					<div class="installment">
+						<span class="number-installment">ou ${product.NumbersOfInstallment}x de</span>
+						<span class="value-installment">$product.InstallmentValue sem juros</span>
+					</div>
+					#end
+				</div>
+				
+			</div>
+			#else
+			<div class="shelf__default--no-stock">
+				<span class="shelf__default--no-stock-message">Produto esgotado</span>
+			</div>
+			#end
+		</a>
+
+	
+</div>

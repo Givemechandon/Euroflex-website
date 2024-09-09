@@ -1,0 +1,155 @@
+<!--Header Starts-->
+<header id="ecn-header" class="header">
+
+  <!-- Tipbar -->
+  <div class="tipbar">
+    <!--
+  <a href="javascript:void(0);" class="tipbar__close" aria-label="Fechar">
+    Fechar
+  </a>
+  -->
+    <div class="container">
+      <div class="tipbar__wrapper">
+        <div class="tipbar__slider">
+          <vtex.cmc:tipbar />
+        </div>
+        
+        <div class="tipbar__nav">
+          <vtex.cmc:tipbarNav />
+        </div>
+
+      </div>
+      
+     
+    </div>
+
+    
+  </div>
+  <!-- END Tipbar -->
+
+
+
+  <!-- Header Middle -->
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle--wrapper">
+        <!-- Menu -->
+        <a href="javascript:void(0)" class="menu" aria-label="Abrir menu"></a>
+        <!-- END Menu -->
+
+        <!-- Logo -->
+        <div class="header__middle--logo">
+          <a href="/" alt="Euro Colhcões">
+            <img src="/arquivos/logo.png" width="230" height="42" alt="logo" />
+          </a>
+        </div>
+        <!-- END Logo -->
+
+        <!-- MENU -->
+        <nav class="header__middle--menu">
+          <!-- Account Navigation -->
+          <div class="header__middle--menu--mobile-acount">
+            <div class="header__middle--menu--mobile-acount--wrapper">
+              <div class="header__middle--menu--mobile-acount--sub">
+                <ul>
+                  <li><a href="/_secure/account#/profile" class="account-user">Olá, {{user}}</a></li>
+                  <li><a href="/_secure/account#/profile">Minha Conta</a></li>
+                  <li><a href="/_secure/account#/orders">Meus Pedidos</a></li>
+                  <li><a href="/no-cache/user/logout" class="sair">Sair</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- END: Account Navigation -->
+          <!-- Department navigator -->
+          <vtex.cmc:departmentNavigator />
+          <!-- END: Department navigator -->
+
+          <!-- ADDITIONAL MENU-->
+          <div class="header__middle--menu--mobile--additional-menu">
+            <ul>
+              <li><a href="javascript:void(0)" class="js-change--region" title="Selecione uma região">Selecione umaregião</a></li>
+              <li class="hideMenuOption" style="display: none;"><a href="https://3d.visitaeurocolchoes.com/tour/lojavirtual">Tour Virtual</a></li>
+              <li><a href="/institucional/nossas-lojas" title="Lojas">Lojas</a></li>
+              <li><a href="/institucional/atendimento-hoteis" title="Hotéis">Hotéis</a></li>
+              <li><a href="/informacoes/seja-um-franqueado" title="Seja um franqueado">Seja um franqueado</a></li>
+            </ul>
+          </div>
+          <!-- END: ADDITIONAL MENU-->
+
+          <!-- LOGIN MENU -->
+          <div class="header__middle--menu--mobile-login">
+            <ul>
+              <li>
+                <a href="/login" class="register" title="CADASTRE-SE">CADASTRE-SE</a>
+              </li>
+              <li>
+                <a href="/login" class="login" title="ENTRAR">ENTRAR</a>
+              </li>
+            </ul>
+          </div>
+          <!-- END: LOGIN MENU -->
+        </nav>
+        <!-- END: MENU -->
+
+        <!-- NAV -->
+        <div class="header__middle--nav">
+          <ul>
+            
+            <li class="nav-virtual-store" style="display: none;">
+              <a href="https://3d.visitaeurocolchoes.com/tour/lojavirtual">
+                Tour Virtual
+              </a>
+            </li>
+
+            <li class="nav-search">
+              <!-- Search -->
+              <div class="header__middle--search-box">
+                <div class="search-box-api">
+                  <!-- START: Header Content - Search -->
+                  <div class="header__content--item header__search">
+                    <form action="#" method="post" class="search__form">
+                      <a href="javascript:void(0)" class="search__close">Fechar</a>
+                      <input type="search" class="default-input search__input" placeholder="O que deseja buscar?" />
+                      <button type="submit" class="search__submit">Buscar</button>
+                    </form>
+
+                    <div class="search__target"></div>
+                  </div>
+                  <!-- END: Header Content - Search -->
+                </div>
+              </div>
+              <!-- END Search -->
+              <a href="#" class="js-toggle-search" title="Buscar"></a>
+            </li>
+
+            <li class="csb-menu"></li>
+
+            <li class="nav-virtual-store-mobile" style="display: none;">
+              <a href="https://3d.visitaeurocolchoes.com/tour/lojavirtual">
+                <img src="/arquivos/icone_loja_virtual-ai.png" alt="Icone Loja Virtual" />
+              </a>
+            </li>
+
+            <li class="nav-account">
+              <a href="/_secure/account#/profile" title="Login">
+                <span>Login</span>
+              </a>
+            </li>
+
+
+            <li class="nav-cart">
+              <a href="javascript:void(0)" title="Carrinho" class="nav-cart--link" data-quantity="0">
+                <span>Carrinho</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- END: NAV -->
+        <div class="nav-overlay"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END Header Middle -->
+</header>

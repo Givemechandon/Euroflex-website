@@ -1,0 +1,130 @@
+.ecn-tabs {
+    &__navigation {
+        @include make-col(2);
+        float: left;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            li {
+                display: block;
+                margin-bottom: 20px;
+                a {
+                    display: inline-block;
+                    color: $gray-800;
+                    @include rem("font-size", 16px);
+                    padding: 0;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+                    font-weight: 400;
+                    font-family: $font_family;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 0px;
+                        height: 2px;
+                        background-color: $blue-theme;
+                        margin-top: 5px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover,
+                    &.active {
+                        color: $blue-theme;
+                        font-weight: 600;
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        @include make-col(10);
+        float: left;
+        @include rem('font-size', 14px);
+        @include rem('line-height', 24px);
+        color: $gray-800;
+
+        @include media-breakpoint-down(sm) {
+            @include make-col(12);
+            @include rem('font-size', 11px);
+            @include rem('line-height', 18px);
+        }
+
+        &--container{
+            @include media-breakpoint-up(sm) {
+                @include rem("max-height", 430px);
+                @include rem("padding-left", 10px);
+                overflow-y: auto;
+                direction: rtl;
+
+                @include custom-scrollbar;
+            }
+
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+                padding-bottom: 30px;
+            }
+
+            .productDescription {
+                direction: ltr;
+                @include rem('font-size', 16px);
+                h1, h2, h3, h4, h5 {
+                    font-weight: 700;
+                    @include rem('font-size', 16px);
+                }
+
+                @include media-breakpoint-down(sm) {
+                  @include rem('font-size', 14px);
+                  line-height: 1.4;
+                }
+            }
+        }
+
+        &--item{
+            display: none;
+            &[data-active="true"]{
+                display: block;
+            }
+            @include media-breakpoint-down(sm) {
+                display: block;
+                border-bottom: 1px solid $blue-theme-light-300;
+            }
+
+            &--toggle{
+                position: relative;
+                display: block;
+                @include rem('font-size', 11px);
+                color: $blue-theme;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 10px 0;
+                &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(0,-50%);
+                    width: 9px;
+                    height: 9px;
+                    background: use-svg(icon-more, $blue-theme-light-300) no-repeat center center;
+                }
+                &.open {
+                    &:after{
+                        background: use-svg(icon-more, $blue-theme) no-repeat center center;
+                    }
+                }
+                @include media-breakpoint-up(sm) {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+

@@ -1,0 +1,359 @@
+.vtexIdUI * {
+  // transition: none !important;
+}
+
+.vtexIdUI .vtexIdUI-page-inactive {
+  display: none;
+  transform: none !important;
+  opacity: 0 !important;
+  visibility: hidden;
+  &.vtexIdUI-enter-right, &.vtexIdUI-enter-left {
+    opacity: 0 !important;
+  }
+}
+.vtexIdUI .vtexIdUI-page-active {
+  display: block;
+  z-index: 999;
+  opacity: 1 !important;
+  visibility: visible;
+
+  &.vtexIdUI-leave-right,&.vtexIdUI-leave-left {
+    opacity: 0 !important;
+  }
+}
+.vtexIdUI .vtexIdUI-enter-right {
+  z-index: 999;
+  opacity: 1 !important;
+  transition: all 0.3s ease-in-out;
+  animation: none !important;
+  visibility: visible;
+}
+.vtexIdUI .vtexIdUI-leave-right {
+  z-index: 99;
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out;
+  animation: none !important;
+  visibility: hidden;
+}
+.vtexIdUI .vtexIdUI-enter-left {
+  z-index: 999;
+  opacity: 1 !important;
+  transition: all 0.3s ease-in-out;
+  animation: none !important;
+  visibility: visible;
+}
+.vtexIdUI .vtexIdUI-leave-left {
+  z-index: 99;
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out;
+  animation: none !important;
+  visibility: hidden;
+}
+
+
+.vtexIdUI .vtexIdUI-page-inactive{
+  transform: none !important;
+  opacity: 0 !important;
+}
+.vtexIdUI .vtexIdUI-page-active{
+  transform: none !important;
+  opacity: 1 !important;
+}
+#vtexIdContainer {
+  position: fixed !important;
+  z-index: 9999999999 !important;
+  background: rgba(0,0,0,.3);
+  
+  .vtexIdUI {
+    // transition: none !important;
+
+    &:before {
+      content: '';
+      position: absolute;
+      transform: translate(-50%, 0);
+      left: 50%;
+      top: -90px;
+      
+      margin: 0 auto 30px;
+    }
+
+
+    box-shadow: none;
+    border: none;
+    top: calc(50% + 45px);
+    margin-left: 0;
+    transform: translate(-50%, -50%);
+    width: 430px;
+    max-width: calc(100% - 30px);
+    overflow: initial !important;
+    border-radius: 10px;
+    border: 1px solid $gray-500;
+
+    .vtexid-icon-lock.bottom-icon {
+      display: none;
+    }
+
+    .vtexIdUI-auth-code {
+      .vtexIdUI-code-field {
+        margin: 15px auto;
+        width: 60%;
+      }
+
+       input {
+        font-size: 32px;
+      }
+    }
+
+    .vtexIdUI-page {
+      form {
+        padding-bottom: 60px;
+      }
+      /*
+      Header
+       */
+      .modal-header {
+        position: relative;
+        background: transparent;
+        border: none;
+        text-align: center;
+        padding: 45px 35px 23px;
+
+        .close {
+          display: block!important;
+          background: $blue-theme-light-300;
+          padding: 11px;
+          border-radius: 0;
+          font-size: 0;
+          top: -15px;
+          right: -15px;
+          cursor: pointer;
+          outline: none;
+          border-radius: 100%;
+
+          &:before {
+            content: '';
+            display: block;
+            background: use-svg(icon-close, $white) no-repeat center center;
+            width: 12px;
+            height: 12px;
+          }
+        }
+
+        h4 {
+          max-width: 255px;
+          display: block;
+          margin: 0 auto;
+          
+          span {
+            font-family: $font_family;
+            @include rem('font-size', 20px);
+            @include rem('line-height', 26px);
+            font-weight: bold;
+            color: $blue-theme;
+          }
+        }
+      }
+      /*
+      Body
+       */
+      .modal-body {
+        padding: 0 35px 35px;
+        background: transparent;
+
+        .vtexIdUI-providers-list {
+          li {
+            position: relative;
+
+            button {
+              background-image: none;
+              border-radius: 0px;
+              box-shadow: none;
+              text-align: left;
+              padding-left: 45px;
+              padding-right: 11px;
+              font-weight: 700;
+              text-align: center;
+
+
+              &#loginWithAccessKeyBtn {
+                border: 1px solid $green-theme-100;
+                background: $green-theme-100;
+                border-radius: 6px;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 25px;
+                  transform: translate(-50%, -50%);
+                  background: use-svg(icon-keys, $white) no-repeat center center;
+                  width: 27.69px;
+                  height: 28.66px;
+                }
+                span{
+                  color: $white;
+                }
+              }
+
+              &#loginWithUserAndPasswordBtn {
+                border: 1px solid $brown-theme;
+                background: $brown-theme;
+                border-radius: 6px;
+                span{
+                  color: $white;
+                }
+                
+                &:after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 25px;
+                  transform: translate(-50%, -50%);
+                  background: use-svg(icon-mail, $white) no-repeat center center;
+                  width: 25.2px;
+                  height: 18.88px;
+                }
+              }
+
+              &#vtexIdUI-facebook {
+                border: 1px solid $facebook-theme-color;
+                background: $facebook-theme-color;
+                border-radius: 6px;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 25px;
+                  transform: translate(-50%, -50%);
+                  background: use-svg(icon-facebook, $white) no-repeat center center;
+                  width: 27.69px;
+                  height: 28.66px;
+                }
+                span{
+                  color: $white;
+                }
+              }
+
+
+              &#vtexIdUI-google-plus {
+                border: 1px solid $google-theme-color;
+                background: $google-theme-color;
+                border-radius: 6px;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 25px;
+                  transform: translate(-50%, -50%);
+                  background: use-svg(icon-google, $white) no-repeat center center;
+                  width: 24.54px;
+                  height: 25.04px;
+                }
+                span{
+                  color: $white;
+                }
+
+              }
+
+             
+
+              span {
+                font-family: $font_family;
+                color: $black;
+                font-size: 14px;
+                text-align: left;
+                text-shadow: none;
+                font-weight: 400;
+                @media(max-width: 768px){
+                  font-size: 10px;
+                }
+              }
+
+              i {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      /*
+      Footer
+       */
+      .modal-footer {
+        background: transparent;
+        border: none;
+        padding: 0 85px;
+        margin-top: 30px;
+      }
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      background: $gray-200;
+      border-radius: 4px;
+      box-shadow: none;
+      border: none;
+      padding: 0 15px;
+      height: 45px;
+      line-height: 45px;
+    }
+
+    .vtexId-link,
+    a {
+      color: $black;
+      font-family: $font_family;
+      font-size: 12px;
+    }
+
+    .btn-success {
+      border-radius: 4px;
+      background: $blue-theme;
+      font-family: $font_family;
+      color: $white;
+      box-shadow: none;
+      text-decoration: none;
+      border: none;
+      text-shadow: none;
+    }
+  }
+
+  .vtexid-password-requirements {
+    ul {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+
+
+@media(max-width: 767px){
+  #vtexIdContainer {
+    .vtexIdUI {
+      max-width: calc(100% - 40px);
+  
+      &:before {
+        transform: scale(.8) translate(-60%, 0);
+      }
+
+      .vtexIdUI-page {
+        .modal-header{
+          padding: 30px 50px 20px;
+        }
+        .modal-body{
+          padding: 10px;
+          .vtexIdUI-providers-list li button{
+            padding: 9px 9px 9px 35px;
+            &:after{
+              left: 20px !important;
+            }
+          }
+        }
+
+        .modal-footer{
+          padding: 0 10px;
+        }
+      }
+    }
+    
+  }
+}

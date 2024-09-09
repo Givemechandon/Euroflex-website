@@ -1,0 +1,30 @@
+.ecn-lightbox--wrapper--notify{
+    .ecn-lightbox--content{
+        max-width: 430px;
+
+        .icon-warn{
+            &:before{
+                content: '';
+                display: block;
+                background: use-svg(icon-warn, $blue-theme-light-300) no-repeat center center;
+                width: 60.5px;
+                height: 53.04px;
+                margin: 0 auto 17px;
+              }
+        }
+
+        h3 {
+            @include rem("font-size", 18px);
+            @include rem("line-height", 24px);
+            color: $blue-theme;
+        }
+        span {
+            display: block;
+            @include rem("font-size", 14px);
+            margin: 7.5px 0 20px;
+            color: $gray-900;
+            font-weight: 400;
+        }
+    }
+    
+}

@@ -1,0 +1,19 @@
+{
+  "versions": {
+    "0": {
+      "web": [
+        "bower_components/js-cookie/src/js.cookie.js",
+        "assets/vendor/vtex-class.js",
+        "assets/vendor/vtex-search.js",
+        "assets/vendor/jquery.mask.js",
+        "assets/vendor/scrolly.js",
+        "assets/vendor/video-modal.js",
+        "assets/vendor/headroom.min.js",
+        "bower_components/select2/dist/js/select2.full.min.js",
+        "bower_components/slick-carousel/slick/slick.js",
+        "bower_components/jquery-validation/dist/jquery.validate.js",
+        "bower_components/jquery-validation/src/localization/messages_pt_BR.js"
+      ]
+    }
+  }
+}

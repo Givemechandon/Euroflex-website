@@ -1,0 +1,160 @@
+.ecn-lightbox {
+    &--wrapper {
+        &--newsletter-popup,
+        &--success {
+            .ecn-lightbox--content {
+                max-width: 860px;
+                &.success{
+                    max-width: 430px;
+                }
+
+                &--body {
+                    display: flex;
+                    align-items: center;
+                    &--image {
+                        display: inline-block;
+                        width: 50%;
+                        float: left;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    &--text {
+                        display: inline-block;
+                        width: 50%;
+                        padding: 0 35px 0 45px;
+                        float: right;
+
+                        h3 {
+                            @include rem("font-size", 18px);
+                            @include rem("line-height", 24px);
+                            color: $blue-theme;
+                        }
+                        span {
+                            display: block;
+                            @include rem("font-size", 14px);
+                            margin: 7.5px 0 20px;
+                            color: $gray-900;
+                            font-weight: 400;
+                        }
+
+                        form {
+                            > ul {
+                                padding: 0 0 4px;
+
+                                > li {
+                                    position: relative;
+                                    display: block;
+                                    padding: 0 0 8px;
+
+                                    input {
+                                        @extend %input-b-blue-md;
+                                    }
+
+                                    label.error {
+                                        display: none !important;
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 5px;
+                                        font-size: 11px;
+                                        text-transform: initial;
+                                        text-align: left;
+                                        color: $red;
+                                    }
+                                }
+                            }
+
+                            button {
+                                @extend %primary-button-md;
+                                width: 245px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+
+                    &.success {
+                        display: block;
+                        
+                        .newsletter-success-icon{
+                            &:after {
+                                content: '';
+                                display: block;
+                                margin: 0 auto 10px;
+                                background: use-svg(icon-clapping, $blue-theme-light-300) no-repeat center center;
+                                width: 62.36;
+                                height: 57.85px
+                              }
+                        }
+                        h3 {
+                            display: block;
+                            color: $blue-theme;
+                        }
+                        p {
+                            padding: 20px 15px;
+                            @include rem('font-size', 14px);
+                            @include rem('line-height', 22px);
+                            color: $gray-900;
+                        }
+                        a {
+                            @extend %primary-button-md-outline;
+                            width: 245px;
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                &.success {
+                    max-width: 430px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .ecn-lightbox {
+        &--wrapper {
+            &--newsletter-popup,
+            &--success {
+                .ecn-lightbox--content {
+                    max-width: 860px;
+
+                    &--body {
+                        display: block;
+                        padding: 25px 23.5px;
+                        &--image {
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                        &--text {
+                            width: 100%;
+                            padding: 0;
+                            h3 {
+                                @include rem("font-size", 14px);
+                            }
+                            span {
+                                @include rem("font-size", 10px);
+                            }
+
+                            form {
+                                > ul {
+                                    > li {
+                                        input {
+                                        }
+                                    }
+                                }
+
+                                button {
+                                }
+                            }
+                        }
+
+                        &.success {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

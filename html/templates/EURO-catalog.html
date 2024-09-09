@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Catalog" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+  <link rel="stylesheet" type="text/css" href="/arquivos/Euro-lore-more.css"/>
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- Top content -->
+    <section class="catalog__banner--top">
+
+      <div class="catalog__banner--top--wrapper">
+        <!-- Banner departamento -->
+        <vtex:contentPlaceHolder id="Banner departamento" />
+        <!-- Banner departamento -->
+      </div>
+
+    </section>
+    <!-- END  Top content -->
+
+
+    <!-- Top content -->
+    <section class="catalog__breadcrumb">
+      <div class="container">
+        <div class="catalog__breadcrumb--wrapper">
+          <!-- Conteúdo abaixo do Breadcrumb -->
+          <vtex.cmc:breadCrumb />
+          <!-- Conteúdo abaixo do Breadcrumb -->
+        </div>
+      </div>
+    </section>
+    <!-- END  Top content -->
+
+
+    <!-- Top search -->
+    <section class="catalog__search--info"></section>
+    <!-- END  Top search -->
+
+
+
+    <!-- Filtro  [ Mobile only ] -->
+    <section class="catalog__mobile-navigation">
+      <div class="catalog__mobile-navigation--wrapper">
+        <div class="container">
+          <a href="#" class="catalog__mobile-navigation--toggle-filter">
+            <span>Filtrar</span>
+          </a>
+          <a href="javascript:void(0)" class="catalog__mobile-navigation--toggle-order">
+            <span>Ordenar por</span>
+          </a>
+
+          <div class="catalog__grid-control catalog__grid-control--mobile">
+            <span>Visualização</span>
+            <ul>
+              <li><a href="javascript:void(0)" class="catalog__grid-control--first"></a></li>
+              <li><a href="javascript:void(0)" class="catalog__grid-control--second"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Filtro  [ Mobile only ]  -->
+
+
+
+
+    <!-- Content -->
+    <section class="catalog__search-result">
+      <div class="container">
+            <!-- Catalog navigation -->
+    <div class="catalog__search-result--navigator">
+      <div class="container">
+        <div class="catalog__search-result--wrapper">
+            <div class="catalog__search-result--head">
+              <span>Filtrar</span>
+              <a href="#" aria-label="Fechar">Fechar</a>
+            </div>
+
+            <div class="catalog__search-result--selected-filters">
+                <div class="catalog__selected-filters"></div>
+                <div class="catalog__search-result--selected-filters--actions">
+                  <a href="#" class="catalog--clear-filters" aria-label="Limpar filtros">Limpar Filtros</a>
+                  <a href="#" class="catalog--filter" aria-label="Filtrar">Filtrar</a>
+                </div>
+            </div>
+
+            <!-- searchNavigator -->
+            <vtex.cmc:searchNavigator />
+            <!-- searchNavigator -->
+            
+          </div>
+        </div>
+      </div>
+      <!-- END: Catalog navigation -->
+        <!-- Product list -->
+        <div class="catalog__search-result--product-list">
+
+          <div class="catalog__search-result--top">
+          <div class="catalog__search-result--busca">
+          </div>
+
+          <!-- START: Order -->
+          <div class="catalog__search-result--order">
+            <label>Ordenar por</label>
+            <select class="search-order" id="search-order">
+              <!--<option value="">Ordenar por</option>-->
+              <option value="OrderByPriceASC">Menor Preço</option>
+              <option value="OrderByPriceDESC">Maior Preço</option>
+              <!--<option value="OrderByReleaseDateDESC">Novidade</option>
+              <option value="OrderByTopSaleDESC">Mais vendidos</option>
+              <option value="OrderByBestDiscountDESC">Melhor Desconto</option>-->
+              <!-- <option value="OrderByReviewRateDESC">Melhores avaliações</option>
+                  <option value="OrderByNameASC">A - Z</option>
+                  <option value="OrderByNameDESC">Z - A</option>
+                  <option value="OrderByReleaseDateDESC">Novidade</option>
+                  -->
+            </select>
+          </div>
+          <!-- END: Order -->
+
+          <div class="catalog__grid-control">
+            <span>Visualização</span>
+            <ul>
+              <li><a href="javascript:void(0)" class="catalog__grid-control--first"></a></li>
+              <li><a href="javascript:void(0)" class="catalog__grid-control--second"></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+          <vtex.cmc:searchResult layout="13083d89-42c1-4d88-b364-f63143073387" itemCount="24" columnCount="24" />
+        </div>
+        <!-- END Product list -->
+
+
+      </div>
+
+    </section>
+    <!-- END Content -->
+
+    <!-- Top content -->
+    <section class="catalog__shelf">
+      <div class="container">
+        <div class="catalog__shelf--wrapper">
+          <!-- Apoio SEO -->
+          <vtex:contentPlaceHolder id="Título prateleira" />
+          <vtex:contentPlaceHolder id="Prateleira" />
+          <!-- Apoio SEO -->
+        </div>
+      </div>
+
+    </section>
+    <!-- END  Top content -->
+
+    <div class="catalog__mobile--order">
+      <div class="catalog__mobile--order--head">
+        <span>Ordenar por</span><a href="#" aria-label="Fechar">Fechar</a>
+      </div>
+      <ul>
+        <li><a href="javascript:void(0)" data-value="OrderByPriceASC">Menor Preço</a></li>
+        <li><a href="javascript:void(0)" data-value="OrderByPriceDESC">Maior Preço</a></li>
+        <!--<li><a href="javascript:void(0)" data-value="OrderByReleaseDateDESC">Novidade</a></li>
+        <li><a href="javascript:void(0)" data-value="OrderByTopSaleDESC">Mais vendidos</a></li>
+        <li><a href="javascript:void(0)" data-value="OrderByBestDiscountDESC">Melhor Desconto</a></li>-->
+        <!-- <li><a value="OrderByReviewRateDESC">Melhores avaliações</a></li>
+        <li><a value="OrderByNameASC">A - Z</a></li>
+        <li><a value="OrderByNameDESC">Z - A</a></li>
+        -->
+      </ul>
+    </div>
+    
+    <!-- Countdown-->   
+  <vtex.cmc:euroofertaexpirarelogio />
+  <!-- Countdown-->
+
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+  <vtex:template id="EURO-scripts" />
+  <script src="/arquivos/Euro-2021-enhancedCounter.js"></script>
+  <!-- Footer -->
+  
+  
+</body>
+
+</html>

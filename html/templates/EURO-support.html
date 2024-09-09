@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+  <vtex:metaTags />
+  <meta name="controller" content="Support" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <vtex:template id="EURO-styles" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="/arquivos/html5shiv.min.js"></script>
+    <script src="/arquivos/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- START - Subtemplate Header -->
+  <vtex:template id="EURO-header" />
+  <!-- END - Subtemplate Header -->
+
+  <!-- START - Miolo da página -->
+  <main class="main" id="main">
+
+    <!-- support title -->
+    <section class="support__title">
+      <div class="container">
+        <div class="support__title--wrapper">
+          <vtex:contentPlaceHolder id="Título" />
+        </div>
+      </div>
+    </section>
+    <!-- END support title -->
+
+    <!-- support content -->
+    <section class="support__content">
+      <div class="container">
+
+        <div class="support__content--wrapper">
+          <!-- Menu lateral -->
+
+          <div class="support__menu ">
+            <div class="support__menu--wrapper">
+               <!-- Tipbar -->
+              <vtex.cmc:menuSupport />
+              <!-- END Tipbar -->
+            </div>
+          </div>
+
+          <!-- END Menu lateral -->
+          <!-- Menu lateral -->
+
+          <div class="support__cms">
+            <div class="support__cms--wrapper">
+              <!-- Tipbar -->
+              <vtex:contentPlaceHolder id="Conteúdo" />
+              <!-- END Tipbar -->
+            </div>
+          </div>
+
+          <!-- END Menu lateral -->
+        </div>
+      </div>
+
+    </section>
+    <!-- END support content -->
+
+
+  </main>
+  <!-- END - Miolo da página -->
+
+  <!-- Popup -->
+  <div class="ecn-lightbox">
+    <div class="ecn-lightbox--wrapper ecn-lightbox--wrapper--support">
+      <div class="ecn-lightbox--content">
+        <div class="ecn-lightbox--content--wrapper">
+          
+          <div class="ecn-lightbox--content--wrapper">
+            <a class="ecn-lightbox--content--close" aria-label="Fechar" href="javascript:void(0)">x</a>
+            <div class="ecn-lightbox--content--body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Popup -->
+  <!-- Footer -->
+  <vtex:template id="EURO-footer" />
+  <vtex:template id="EURO-scripts" />
+  <!-- Footer -->
+</body>
+
+</html>

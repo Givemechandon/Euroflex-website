@@ -1,0 +1,49 @@
+.body-order-form {
+  .client-pre-email-h{
+    span{
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+  .client-pre-email{
+    border-top: none;
+  }
+  .client-pre-email .client-email {
+    margin-top: 25px;
+  }
+  .emailInfo{
+    display: none;
+  }
+
+  .client-pre-email .emailInfo .icon-ok,
+  .client-pre-email .emailInfo h3 {
+    color: $black;
+  }
+
+  .client-pre-email .emailInfo .icon-lock {
+    color: #f3f3f3;
+  }
+
+  .client-pre-email input {
+    box-shadow: none;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .client-pre-email .btn-success {
+    background-image: initial;
+    background-color: $red-theme;
+    font-family: $font_family;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    border-radius: 4px;
+    text-shadow: none;
+    text-transform: uppercase; 
+    box-shadow: none;
+    border: none;
+    @media(max-width: 768px){
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.default-modal{
+  background-color: $white;
+  color: $black;
+
+  p{
+    color: $black;
+    @include rem('font-size', 14px);
+  }
+
+  .identified-user-hello, .payment-confirmation-thanks, .guest-login-title{
+    margin-top: 15px;
+  }
+
+  button.btn.btn-large, input[type="submit"].btn.btn-large{
+    background: black;
+    color: $white;
+    border: none;
+    text-shadow: none;
+    font-size: 14px;
+    border-radius: 0;
+  }
+}
