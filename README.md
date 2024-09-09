@@ -1,4 +1,4 @@
-## Instalando depend�ncias
+## Instalando dependencias
 
 ```
     npm install
@@ -17,3 +17,6 @@
     gulp watch
 
 ```
+## 1.2.10 PARTE DO CÓDIGO QUE FOI DESENVOLVIDA E MANUTENIDA POR BRUNO.CORREIA-TI
+
+## TECH LEAD - PAULO
